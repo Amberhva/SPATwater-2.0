@@ -2,7 +2,7 @@
 </script>
 
 <section class="expertise section">
-  <h2 class="section-title">Expertise</h2>
+  <h2 class="expertise-title">Expertise</h2>
 
   <div class="expertise__wrapper">
     <div class="expertise__card">
@@ -39,11 +39,9 @@
     position: relative;
   }
 
-  .expertise__title {
-    font-size: 1.5rem;
+  .expertise-title {
+    padding: 4rem 2.5rem;
     color: var(--spat);
-    font-weight: 600;
-    text-align: center;
   }
 
   .expertise h3 {
@@ -105,5 +103,16 @@
     transform: scale(1.075);
     transition: 0.3s ease-in;
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 568px) {
+    .expertise__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2em 0 2em;
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
   }
 </style>

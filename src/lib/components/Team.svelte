@@ -17,7 +17,7 @@
 </script>
 
 <section class="team section">
-  <h2 class="section-title">Team</h2>
+  <h2 class="team-title">Team</h2>
 
   <div class="team-container swiper-container">
     <div class="swiper-wrapper">
@@ -91,6 +91,11 @@
     display: none;
   }
 
+  .team-title {
+    padding: 4rem 2.5rem;
+    color: var(--spat);
+  }
+
   .team {
     position: relative;
     background-color: white;
@@ -143,6 +148,11 @@
   @media screen and (min-width: 720px) {
     .team {
       display: none;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      padding: 4rem 2rem;
     }
 
     .team2 {
