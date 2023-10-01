@@ -18,7 +18,7 @@
 </script>
 
 <section>
-  <h2>Projecten</h2>
+  <h2 id="projecten">Projecten</h2>
 
   <div class="project-view-container">
     <article class="project-list">
@@ -56,7 +56,7 @@
 
   .project-list {
     width: 40%;
-    background-color: aqua;
+    background: var(--lg-bg);
 
   }
 
