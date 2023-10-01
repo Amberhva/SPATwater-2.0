@@ -13,6 +13,14 @@
         subdomains: 'abcd',
     }).addTo(map);
 
+    // Add a circle marker at the specified coordinates
+    var circle = L.circle([52.360116, 4.9195973], {
+        color: 'transparent',       // Border color of the circle
+        fillColor: '#73CA6A',   // Fill color of the circle
+        fillOpacity: 0.5,   // Fill opacity
+        radius: 200         // Radius of the circle in meters
+    }).addTo(map);
+
   });
 
 </script>
