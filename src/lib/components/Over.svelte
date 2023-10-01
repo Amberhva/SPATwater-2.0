@@ -147,6 +147,9 @@
   }
 
   @media screen and (min-width: 1024px) {
+    .section {
+      padding: 5rem 10rem;
+    }
     .about-title {
       font-size: 1.4rem;
       margin-bottom: 2rem;
