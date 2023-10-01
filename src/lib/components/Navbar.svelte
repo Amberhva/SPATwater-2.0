@@ -26,7 +26,7 @@
         <li class="nav-link"><a href="#">Home</a></li>
         <li class="nav-link"><a href="#">Over</a></li>
         <li class="nav-link"><a href="#">Expertise</a></li>
-        <li class="nav-link"><a href="#">Projecten</a></li>
+        <li class="nav-link"><a href="#projecten">Projecten</a></li>
         <li class="nav-link"><a href="#">Blog</a></li>
         <li class="nav-link"><a href="#">Team</a></li>
         <li class="nav-link"><a href="#"><span>Contact</span></a></li>
