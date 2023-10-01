@@ -21,14 +21,11 @@
     background-color: var(--lg-bg);
   }
   .contact-text {
-    font-size: 1.5em;
+    font-size: 0.8em;
     color: var(--darkblue);
   }
 
   .contact-data {
-    margin-left: 20rem;
-    display: flex;
-    flex-direction: column;
     color: var(--spat);
   }
 </style>
