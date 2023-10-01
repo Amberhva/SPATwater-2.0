@@ -62,22 +62,6 @@
     text-align: left;
   }
 
-  .button {
-    display: inline-block;
-    background-color: var(--green);
-    color: white;
-    padding: 0.7rem 1rem;
-    border-radius: 5px;
-    font-weight: var(--font-semi-bold);
-    transition: 0.3s;
-    text-decoration: none;
-    z-index: 7;
-  }
-
-  .button:hover {
-    background-color: var(--darkblue);
-  }
-
   .about-image {
     display: inline-block;
     margin-left: 100px;
