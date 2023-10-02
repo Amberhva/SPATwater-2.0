@@ -1,4 +1,6 @@
 <script>
+  export let data
+
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -18,7 +20,8 @@
         color: 'transparent',       // Border color of the circle
         fillColor: '#73CA6A',   // Fill color of the circle
         fillOpacity: 0.5,   // Fill opacity
-        radius: 200         // Radius of the circle in meters
+        radius: 200,         // Radius of the circle in meters
+        shadow: true // Add a shadow to the circle marker
     }).addTo(map);
 
   });
@@ -26,11 +29,15 @@
 </script>
 
 <section>
-  <h2 id="projecten">Projecten</h2>
 
   <div class="project-view-container">
     <article class="project-list">
-      <p>project list</p>
+      <h2 id="projecten">Projecten</h2>
+
+      {#each data.projectens as project }
+        <p>{project.title}</p>
+      {/each}
+
     </article>
   
     <article class="project-map">
@@ -42,16 +49,12 @@
 
 <style>
   h2 {
-    padding: 4rem 2.5rem;
+    padding: 0rem 2.5rem;
     color: var(--spat);
   }
 
-  p {
-    margin: 0;
-    padding: 0;
-  }
-
   section {
+    margin-top: 5rem;
     height: 100vh;
     background: white;
   }
@@ -64,7 +67,6 @@
 
   .project-list {
     width: 40%;
-    background: var(--lg-bg);
 
   }
 
@@ -73,6 +75,6 @@
   }
 
   #map {
-    height: 80vh;
+    height: 85vh;
   }
 </style>
