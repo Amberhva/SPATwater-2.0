@@ -57,7 +57,8 @@
       <div class="set-max-height">
         
         <div class="filter-row">
-          <h2 id="projecten">Projecten</h2>
+          <span class="anchor" id="projecten">Projecten</span>
+          <h2>Projecten</h2>
           <ul class="filter-item-list" id="projectList">
             
             <!-- Dit kan uit hygraph -->
@@ -102,6 +103,12 @@
     padding: 0rem;
     color: var(--spat);
   }
+
+  .anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+}
 
   section {
     margin-top: 5rem;
