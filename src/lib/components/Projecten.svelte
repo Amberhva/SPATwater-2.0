@@ -54,41 +54,40 @@
 
   <div class="project-view-container">
     <article class="projects">
-      <h2 id="projecten">Projecten</h2>
-
-      <!-- {#each data.projectens as project }
-        <p>{project.title}</p>
-      {/each} -->
-      
-      <div class="filter-row">
-        <ul class="filter-item-list" id="projectList">
-          
-          <!-- Dit kan uit hygraph -->
-          <li class="active">Klimaatadaptatie</li>
-          <li>Waterkwaliteit</li>
-          <li>B-RAIN</li>
-        </ul>
-
-        <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
+      <div class="set-max-height">
+        
+        <div class="filter-row">
+          <h2 id="projecten">Projecten</h2>
+          <ul class="filter-item-list" id="projectList">
+            
+            <!-- Dit kan uit hygraph -->
+            <li class="active">Klimaatadaptatie</li>
+            <li>Waterkwaliteit</li>
+            <li>B-RAIN</li>
+          </ul>
+  
+          <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
+        </div>
+  
+        <div class="project-list-container">
+          <ul class="project-list">
+  
+            <!-- Dit kan uit hygraph -->
+            <li id="projectSlug">
+              <div class="horizontal-flex">
+                <img src="/assets/projects2.png" alt="">
+                <div class="project-text">
+                  <span>Waterkwaliteit</span>
+                  <h3>Gemeente Amstelveen</h3>
+                  <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+              </div>
+            </li>
+    
+          </ul>
+        </div>
       </div>
-
-      <ul class="project-list">
-
-        <!-- Dit kan uit hygraph -->
-        <li id="projectSlug">
-          <div class="horizontal-flex">
-            <img src="/assets/projects2.png" alt="">
-            <div class="project-text">
-              <span>Waterkwaliteit</span>
-              <h3>Gemeente Amstelveen</h3>
-              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </div>
-          </div>
-        </li>
-
-      </ul>
-
     </article>
   
     <article class="project-map">
@@ -118,9 +117,17 @@
 
   .projects {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    gap: 1rem;
   }
 
   /* Styling of filter options */
+  .filter-row {
+    height: 20vh;
+  }
+
   .filter-item-list {
     list-style: none;
     padding: 0;
@@ -142,12 +149,11 @@
   }
 
   .searchbar {
-    width: 100%;
+    width: 99%;
     padding: .5rem .6rem;
     border-radius: .5rem;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-    margin-bottom: 1rem;
   }
 
   .searchbar::placeholder {
@@ -155,6 +161,15 @@
   }
 
   /* Styling of project list */
+  .project-list-container {
+    height: 65vh;
+    overflow-y: scroll;
+  }
+
+  .project-list-container::-webkit-scrollbar{
+    display: none;
+  }
+
   .project-list {
     list-style: none;
     padding: 0;
@@ -167,6 +182,7 @@
     border-radius: .5rem;
     cursor: pointer;
     margin-bottom: 1rem;
+    width: 99%;
   }
 
   .project-list .horizontal-flex {
