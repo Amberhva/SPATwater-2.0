@@ -62,6 +62,8 @@
       
       <div class="filter-row">
         <ul class="filter-item-list" id="projectList">
+          
+          <!-- Dit kan uit hygraph -->
           <li class="active">Klimaatadaptatie</li>
           <li>Waterkwaliteit</li>
           <li>B-RAIN</li>
@@ -71,6 +73,8 @@
       </div>
 
       <ul class="project-list">
+
+        <!-- Dit kan uit hygraph -->
         <li id="projectSlug">
           <div class="horizontal-flex">
             <img src="/assets/projects2.png" alt="">
@@ -83,41 +87,6 @@
           </div>
         </li>
 
-        <!-- <li>
-          <div class="horizontal-flex">
-            <img src="/assets/projects1.png" alt="">
-            <div class="project-text">
-              <span>Waterkwaliteit</span>
-              <h3>Gemeente Amstelveen</h3>
-              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="horizontal-flex">
-            <img src="/assets/projects1.png" alt="">
-            <div class="project-text">
-              <span>Waterkwaliteit</span>
-              <h3>Gemeente Amstelveen</h3>
-              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="horizontal-flex">
-            <img src="/assets/projects1.png" alt="">
-            <div class="project-text">
-              <span>Waterkwaliteit</span>
-              <h3>Gemeente Amstelveen</h3>
-              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </div>
-          </div>
-        </li> -->
       </ul>
 
     </article>
