@@ -16,7 +16,15 @@
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',).addTo(map);
 
     // Add a marker at the specified coordinates
-    var projectMarkerSlug = L.circle([52.360116, 4.9195973], {
+    var projectMarkerSlug1 = L.circle([52.360116, 4.9195973], {
+        color: 'transparent',
+        fillColor: '#73CA6A',
+        fillOpacity: 0.5,
+        radius: 200,
+        shadow: true
+    }).addTo(map);
+
+    var projectMarkerSlug2 = L.circle([52.360116, 4.8195973], {
         color: 'transparent',
         fillColor: '#73CA6A',
         fillOpacity: 0.5,
@@ -25,8 +33,12 @@
     }).addTo(map);
 
     // Add a hover event
-    document.getElementById('projectSlug').addEventListener('mouseover', function () {
+    document.getElementById('projectSlug1').addEventListener('mouseover', function () {
       map.setView([52.360116, 4.9195973], 14);
+    });
+
+    document.getElementById('projectSlug2').addEventListener('mouseover', function () {
+      map.setView([52.360116, 4.8195973], 14);
     });
 
 
@@ -73,13 +85,25 @@
           <ul class="project-list">
   
             <!-- Dit kan uit hygraph -->
-            <li id="projectSlug">
+            <li id="projectSlug1">
               <div class="horizontal-flex">
                 <img src="/assets/projects2.png" alt="">
                 <div class="project-text">
-                  <span>Waterkwaliteit</span>
+                  <span>Klimaatadaptatie</span>
                   <h3>Gemeente Amstelveen</h3>
                   <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+              </div>
+            </li>
+
+            <li id="projectSlug2">
+              <div class="horizontal-flex">
+                <img src="/assets/projects4.png" alt="">
+                <div class="project-text">
+                  <span>Klimaatadaptatie</span>
+                  <h3>Gemeente Amsterdam</h3>
+                  <p>Begin 2022 introduceerde Waternet vanuit Amsterdam Rainproof de Rainproof Coaches. In dit project is vanuit een wateroverlast knelpunt gekeken hoe de private.</p>
                   <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </div>
               </div>
