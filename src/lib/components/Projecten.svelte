@@ -34,9 +34,9 @@
     <article class="project-list">
       <h2 id="projecten">Projecten</h2>
 
-      {#each data.projectens as project }
+      <!-- {#each data.projectens as project }
         <p>{project.title}</p>
-      {/each}
+      {/each} -->
 
     </article>
   

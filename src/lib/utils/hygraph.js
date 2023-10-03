@@ -1,7 +1,14 @@
+import { HYGRAPH_KEY, HYGRAPH_URL } from '$env/static/private'
+
+console.log(`URL: ${HYGRAPH_URL}
+KEY: ${HYGRAPH_KEY}
+
+`)
+
 import { GraphQLClient } from 'graphql-request'
 
-export const hygraph = new GraphQLClient("https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/clmzz58fk029m01ue6ma911px/master", {
+export const hygraph = new GraphQLClient(HYGRAPH_URL, {
   headers: {
-    
+    Authorization: `Bearer ${HYGRAPH_KEY}`,
   },
 })
