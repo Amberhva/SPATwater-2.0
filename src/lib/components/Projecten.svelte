@@ -8,12 +8,10 @@
     var map = L.map('map', {
       center: [52.360956, 4.8964073],
       zoom: 12,
-      minZoom: 8 // Set the maximum zoom level to 12
+      minZoom: 10 // Set the maximum zoom level to 12
     });
 
-    var osm = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-        subdomains: 'abcd',
-    }).addTo(map);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',).addTo(map);
 
     // Add a circle marker at the specified coordinates
     var circle = L.circle([52.360116, 4.9195973], {
@@ -31,12 +29,72 @@
 <section>
 
   <div class="project-view-container">
-    <article class="project-list">
+    <article class="projects">
       <h2 id="projecten">Projecten</h2>
 
       <!-- {#each data.projectens as project }
         <p>{project.title}</p>
       {/each} -->
+      
+      <div class="filter-row">
+        <ul class="filter-item-list">
+          <li class="active">Klimaatadaptatie</li>
+          <li>Waterkwaliteit</li>
+          <li>B-RAIN</li>
+        </ul>
+
+        <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
+      </div>
+
+      <ul class="project-list">
+        <li>
+          <div class="horizontal-flex">
+            <img src="/assets/projects2.png" alt="">
+            <div class="project-text">
+              <span>Waterkwaliteit</span>
+              <h3>Gemeente Amstelveen</h3>
+              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </li>
+
+        <!-- <li>
+          <div class="horizontal-flex">
+            <img src="/assets/projects1.png" alt="">
+            <div class="project-text">
+              <span>Waterkwaliteit</span>
+              <h3>Gemeente Amstelveen</h3>
+              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="horizontal-flex">
+            <img src="/assets/projects1.png" alt="">
+            <div class="project-text">
+              <span>Waterkwaliteit</span>
+              <h3>Gemeente Amstelveen</h3>
+              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="horizontal-flex">
+            <img src="/assets/projects1.png" alt="">
+            <div class="project-text">
+              <span>Waterkwaliteit</span>
+              <h3>Gemeente Amstelveen</h3>
+              <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </li> -->
+      </ul>
 
     </article>
   
@@ -49,7 +107,7 @@
 
 <style>
   h2 {
-    padding: 0rem 2.5rem;
+    padding: 0rem;
     color: var(--spat);
   }
 
@@ -65,9 +123,104 @@
     padding: 0rem 2.5rem;
   }
 
-  .project-list {
+  .projects {
     width: 40%;
+  }
 
+  /* Styling of filter options */
+  .filter-item-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 2rem 0rem 1rem 0rem;
+    color: #2B3F5A;
+  }
+
+  .filter-item-list li {
+    margin-right: 10%;
+    padding: .2rem .6rem;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #4ECD5D;
+    color: #FFFFFF;
+    border-radius: .5rem;
+  }
+
+  .searchbar {
+    width: 100%;
+    padding: .5rem .6rem;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+    margin-bottom: 1rem;
+  }
+
+  .searchbar::placeholder {
+    color: #B7B7B7;
+  }
+
+  /* Styling of project list */
+  .project-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .project-list li {
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  .project-list .horizontal-flex {
+    display: flex;
+  }
+
+  .project-list img {
+    width: 25%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    border-radius: .5rem 0rem 0rem .5rem;
+  }
+
+  .project-list .project-text {
+    padding: .5rem 1rem;
+    position: relative;
+  }
+
+  .project-list span {
+    color: #2B3F5A;
+    font-weight: 600;
+    font-size: .9rem;
+  }
+
+  .project-list h3 {
+    color: #7FAEC5;
+    margin-bottom: .5rem;
+  }
+
+  .project-list p {
+    color: #2B3F5A;
+    font-size: .9rem;
+  }
+
+  .project-list i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .6rem 1.2rem;
+    color: #73CA6A;
+    transition: .2s;
+  }
+
+  .project-list li:hover i {
+    transform: translateX(.5rem);
   }
 
   .project-map {
