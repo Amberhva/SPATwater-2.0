@@ -55,9 +55,8 @@
   <div class="project-view-container">
     <article class="projects">
       <div class="set-max-height">
-        
+        <span class="anchor" id="projecten"></span>
         <div class="filter-row">
-          <span class="anchor" id="projecten">Projecten</span>
           <h2>Projecten</h2>
           <ul class="filter-item-list" id="projectList">
             
@@ -108,6 +107,7 @@
     display: block;
     position: relative;
     top: -100px;
+    visibility: hidden;
 }
 
   section {
