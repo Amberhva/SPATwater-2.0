@@ -1,5 +1,6 @@
 <script>
   export let data
+  console.log(data)
 
   import { onMount } from 'svelte';
 
@@ -28,6 +29,23 @@
       map.setView([52.360116, 4.9195973], 14);
     });
 
+
+
+    // Add a click event listener to the list items to toggle the "active" class
+    var listItems = document.querySelectorAll('#projectList li');
+
+    listItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        // Remove the "active" class from all list items
+        listItems.forEach(function (li) {
+          li.classList.remove('active');
+        });
+
+        // Add the "active" class to the clicked list item
+        this.classList.add('active');
+      });
+    });
+
   });
 
 </script>
@@ -43,7 +61,7 @@
       {/each} -->
       
       <div class="filter-row">
-        <ul class="filter-item-list">
+        <ul class="filter-item-list" id="projectList">
           <li class="active">Klimaatadaptatie</li>
           <li>Waterkwaliteit</li>
           <li>B-RAIN</li>
