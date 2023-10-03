@@ -8,19 +8,25 @@
     var map = L.map('map', {
       center: [52.360956, 4.8964073],
       zoom: 12,
-      minZoom: 10 // Set the maximum zoom level to 12
+      minZoom: 10
     });
 
+    // Leaflet map theme
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',).addTo(map);
 
-    // Add a circle marker at the specified coordinates
-    var circle = L.circle([52.360116, 4.9195973], {
-        color: 'transparent',       // Border color of the circle
-        fillColor: '#73CA6A',   // Fill color of the circle
-        fillOpacity: 0.5,   // Fill opacity
-        radius: 200,         // Radius of the circle in meters
-        shadow: true // Add a shadow to the circle marker
+    // Add a marker at the specified coordinates
+    var projectMarkerSlug = L.circle([52.360116, 4.9195973], {
+        color: 'transparent',
+        fillColor: '#73CA6A',
+        fillOpacity: 0.5,
+        radius: 200,
+        shadow: true
     }).addTo(map);
+
+    // Add a hover event
+    document.getElementById('projectSlug').addEventListener('mouseover', function () {
+      map.setView([52.360116, 4.9195973], 14);
+    });
 
   });
 
@@ -47,7 +53,7 @@
       </div>
 
       <ul class="project-list">
-        <li>
+        <li id="projectSlug">
           <div class="horizontal-flex">
             <img src="/assets/projects2.png" alt="">
             <div class="project-text">
