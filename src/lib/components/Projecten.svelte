@@ -1,7 +1,4 @@
 <script>
-  export let data
-  console.log(data)
-
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -13,14 +10,14 @@
     });
 
     // Leaflet map theme
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',).addTo(map);
+    var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
 
     // Add a marker at the specified coordinates
     var projectMarkerSlug1 = L.circle([52.360116, 4.9195973], {
         color: 'transparent',
         fillColor: '#73CA6A',
         fillOpacity: 0.5,
-        radius: 200,
+        radius: 1000,
         shadow: true
     }).addTo(map);
 
@@ -28,7 +25,7 @@
         color: 'transparent',
         fillColor: '#73CA6A',
         fillOpacity: 0.5,
-        radius: 200,
+        radius: 1000,
         shadow: true
     }).addTo(map);
 
@@ -83,6 +80,12 @@
   
         <div class="project-list-container">
           <ul class="project-list">
+
+            {#each data.projectens as project }
+            <blockquote>
+              <p>{project.title}</p>
+            </blockquote>
+            {/each}
   
             <!-- Dit kan uit hygraph -->
             <li id="projectSlug1">
