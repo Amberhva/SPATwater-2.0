@@ -1,4 +1,7 @@
 <script>
+  export let data;
+  console.log(data)
+
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -80,37 +83,20 @@
   
         <div class="project-list-container">
           <ul class="project-list">
-
-            {#each data.projectens as project }
-            <blockquote>
-              <p>{project.title}</p>
-            </blockquote>
-            {/each}
   
-            <!-- Dit kan uit hygraph -->
-            <li id="projectSlug1">
+            {#each data.projectens as project }
+            <li id="{project.slug}">
               <div class="horizontal-flex">
                 <img src="/assets/projects2.png" alt="">
                 <div class="project-text">
-                  <span>Klimaatadaptatie</span>
-                  <h3>Gemeente Amstelveen</h3>
-                  <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+                  <span>{project.categorie}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.intro}</p>
                   <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </div>
               </div>
             </li>
-
-            <li id="projectSlug2">
-              <div class="horizontal-flex">
-                <img src="/assets/projects4.png" alt="">
-                <div class="project-text">
-                  <span>Klimaatadaptatie</span>
-                  <h3>Gemeente Amsterdam</h3>
-                  <p>Begin 2022 introduceerde Waternet vanuit Amsterdam Rainproof de Rainproof Coaches. In dit project is vanuit een wateroverlast knelpunt gekeken hoe de private.</p>
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </div>
-              </div>
-            </li>
+            {/each}
     
           </ul>
         </div>
