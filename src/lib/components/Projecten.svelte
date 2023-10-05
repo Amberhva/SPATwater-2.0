@@ -207,6 +207,9 @@
     padding: .2rem .6rem;
     cursor: pointer;
     font-size: .8rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
 
   .active {
