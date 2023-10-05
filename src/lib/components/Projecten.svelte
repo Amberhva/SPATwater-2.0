@@ -1,6 +1,6 @@
 <script>
   export let data;
-  console.log(data)
+  // console.log(data)
 
   import { onMount } from 'svelte';
 
@@ -54,6 +54,7 @@
 </script>
 
 <section>
+  <h2 class="mobile-h2">Projecten</h2>
 
   <div class="project-view-container">
     <article class="projects">
@@ -76,17 +77,19 @@
           <ul class="project-list">
   
             {#each data.projectens as project }
-            <li id="{project.slug}">
-              <div class="horizontal-flex">
-                <img src="/assets/projects2.png" alt="">
-                <div class="project-text">
-                  <span>{project.categorie}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.intro}</p>
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <a href="/projecten/{project.slug}">
+              <li id="{project.slug}">
+                <div class="horizontal-flex">
+                  <img src="/assets/projects2.png" alt="">
+                  <div class="project-text">
+                    <span>{project.categorie}</span>
+                    <h3>{project.title}</h3>
+                    <p>{project.intro}</p>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </a>
             {/each}
     
           </ul>
@@ -95,7 +98,27 @@
     </article>
   
     <article class="project-map">
-      <div id="map"></div>
+      <div id="map">
+        <div class="mobile-porject-list">
+          <ul>
+
+            {#each data.projectens as project }
+              <a href="/projecten/{project.slug}">
+                <li id="{project.slug}">
+                  <div class="horizontal-flex">
+                    <img src="/assets/projects2.png" alt="">
+                    <div class="project-text">
+                      <span>{project.categorie}</span>
+                      <h3>{project.title}</h3>
+                    </div>
+                  </div>
+                </li>
+              </a>
+            {/each}
+            
+          </ul>
+        </div>
+      </div>
     </article>
   </div>
 
@@ -112,12 +135,20 @@
     position: relative;
     top: -100px;
     visibility: hidden;
-}
+  }
 
   section {
     margin-top: 5rem;
     height: 100vh;
     background: white;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .mobile-h2 {
+    display: none;
   }
 
   .project-view-container {
@@ -148,9 +179,10 @@
   }
 
   .filter-item-list li {
-    margin-right: 10%;
+    margin-right: 5%;
     padding: .2rem .6rem;
     cursor: pointer;
+    font-size: .8rem;
   }
 
   .active {
@@ -250,4 +282,86 @@
   #map {
     height: 85vh;
   }
+
+  .mobile-porject-list {
+    display: none;
+  }
+
+  /* Mobiele weergaven */
+  @media only screen and (max-width: 1100px) {
+    .project-view-container {
+      display: block;
+    }
+
+    .projects {
+      display: none;
+    }
+
+    .project-map {
+      width: 100%;
+    }
+
+    .mobile-porject-list {
+      display: block;
+      position: absolute;
+      z-index: 1000;
+      bottom: 0;
+      height: 20%;
+      width: 100%;
+      padding: .5rem;
+    }
+
+    .mobile-porject-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .mobile-porject-list ul::-webkit-scrollbar{
+      display: none;
+    }
+
+    .mobile-porject-list li {
+      width: 20rem;
+      background: var(--lg-bg);
+      box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+    }
+
+    .mobile-porject-list img {
+      width: 8rem;
+      height: 6rem;
+      object-fit: cover;
+    }
+
+    .horizontal-flex {
+      display: flex;
+    }
+
+    .project-text {
+      padding: .5rem;
+    }
+
+    .mobile-porject-list span {
+      color: #2B3F5A;
+      font-weight: 600;
+      font-size: .7rem;
+    }
+
+    .mobile-porject-list h3 {
+      color: #7FAEC5;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: .5rem;
+    }
+
+    .mobile-h2 {
+      display: block;
+      padding: 0rem 0rem 1rem 2.5rem;
+    }
+}
 </style>
