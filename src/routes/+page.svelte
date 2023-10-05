@@ -1,4 +1,6 @@
 <script>
+  export let data
+
   import Navbar from "../lib/components/Navbar.svelte";
   import Home from "../lib/components/Home.svelte";
   import Over from "../lib/components/Over.svelte";
@@ -21,7 +23,7 @@
 <Klimaatadaptatie />
 <Waterkwaliteit />
 <Brain />
-<Projecten />
+<Projecten {data} />
 <Kennisbank />
 <Team />
 <Contact />

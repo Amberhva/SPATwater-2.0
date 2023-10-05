@@ -1,5 +1,5 @@
 <script>
-  export let data
+  export let data;
   console.log(data)
 
   import { onMount } from 'svelte';
@@ -13,32 +13,23 @@
     });
 
     // Leaflet map theme
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',).addTo(map);
+    var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
 
-    // Add a marker at the specified coordinates
-    var projectMarkerSlug1 = L.circle([52.360116, 4.9195973], {
-        color: 'transparent',
+    // Loop through data.projectens
+    data.projectens.forEach((project, index) => {
+      // Create a marker for each project
+      const marker = L.circle([project.plaats.latitude, project.plaats.longitude], {
+        color: '#73CA6A',
         fillColor: '#73CA6A',
         fillOpacity: 0.5,
-        radius: 200,
-        shadow: true
-    }).addTo(map);
+        radius: 2000,
+        shadow: true,
+      }).addTo(map);
 
-    var projectMarkerSlug2 = L.circle([52.360116, 4.8195973], {
-        color: 'transparent',
-        fillColor: '#73CA6A',
-        fillOpacity: 0.5,
-        radius: 200,
-        shadow: true
-    }).addTo(map);
-
-    // Add a hover event
-    document.getElementById('projectSlug1').addEventListener('mouseover', function () {
-      map.setView([52.360116, 4.9195973], 14);
-    });
-
-    document.getElementById('projectSlug2').addEventListener('mouseover', function () {
-      map.setView([52.360116, 4.8195973], 14);
+      // Add a hover event
+      document.getElementById(project.slug).addEventListener('mouseover', function () {
+        map.setView([project.plaats.latitude, project.plaats.longitude], 14);
+      });
     });
 
 
@@ -84,30 +75,19 @@
         <div class="project-list-container">
           <ul class="project-list">
   
-            <!-- Dit kan uit hygraph -->
-            <li id="projectSlug1">
+            {#each data.projectens as project }
+            <li id="{project.slug}">
               <div class="horizontal-flex">
                 <img src="/assets/projects2.png" alt="">
                 <div class="project-text">
-                  <span>Klimaatadaptatie</span>
-                  <h3>Gemeente Amstelveen</h3>
-                  <p>De CO2-voetafdruk van je bedrijf geeft je inzicht in je CO2-emissie hotspots en stelt je in staat jouw eerste CO2-reductiemaatregelen uit te voeren op het laaghande fruit.</p>
+                  <span>{project.categorie}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.intro}</p>
                   <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </div>
               </div>
             </li>
-
-            <li id="projectSlug2">
-              <div class="horizontal-flex">
-                <img src="/assets/projects4.png" alt="">
-                <div class="project-text">
-                  <span>Klimaatadaptatie</span>
-                  <h3>Gemeente Amsterdam</h3>
-                  <p>Begin 2022 introduceerde Waternet vanuit Amsterdam Rainproof de Rainproof Coaches. In dit project is vanuit een wateroverlast knelpunt gekeken hoe de private.</p>
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </div>
-              </div>
-            </li>
+            {/each}
     
           </ul>
         </div>
