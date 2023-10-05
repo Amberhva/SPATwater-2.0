@@ -27,21 +27,21 @@ SPATwater biedt hulp aan organisaties bij het identificeren van de implicaties v
 </section>
 
 <style>
-  h2 {
- color: var(--spat);
+
+h2 {
+    color: var(--spat);
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
-  }
+}
 
-  section {
-height: 100vh;
+section {
+    height: 100vh;
     padding: 5rem 2.5rem;
     overflow: hidden;
-  }
+}
 
 span{
-  color: var(--darkblue);
-
+    color: var(--darkblue);
 }
 
 p.waterkwaliteit_description, .arrow_section{
@@ -53,13 +53,13 @@ p.waterkwaliteit_description, .arrow_section{
 }
 
 svg{
-width: 21px;
-flex-shrink: 0;
-stroke-width: 1.5px;
+    width: 21px;
+    flex-shrink: 0;
+    stroke-width: 1.5px;
 }
 
 .img_aquathermie{
-transition: 0.3s;
+    transition: 0.3s;
     width: 100%;
 }
 
