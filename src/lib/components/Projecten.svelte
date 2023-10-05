@@ -314,6 +314,11 @@
 
   /* Mobiele weergaven */
   @media only screen and (max-width: 1100px) {
+    #map {
+      height: 65vh;
+      pointer-events: none;
+    }
+
     .project-view-container {
       display: block;
     }
@@ -331,7 +336,7 @@
       position: absolute;
       z-index: 1000;
       bottom: 0;
-      height: 20%;
+      height: 18vh;
       width: 100%;
       padding: .5rem;
     }
