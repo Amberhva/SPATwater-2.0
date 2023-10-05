@@ -15,30 +15,21 @@
     // Leaflet map theme
     var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
 
-    // Add a marker at the specified coordinates
-    var projectMarkerSlug1 = L.circle([52.360116, 4.9195973], {
-        color: 'transparent',
+    // Loop through data.projectens
+    data.projectens.forEach((project, index) => {
+      // Create a marker for each project
+      const marker = L.circle([project.plaats.latitude, project.plaats.longitude], {
+        color: '#73CA6A',
         fillColor: '#73CA6A',
         fillOpacity: 0.5,
-        radius: 1000,
-        shadow: true
-    }).addTo(map);
+        radius: 2000,
+        shadow: true,
+      }).addTo(map);
 
-    var projectMarkerSlug2 = L.circle([52.360116, 4.8195973], {
-        color: 'transparent',
-        fillColor: '#73CA6A',
-        fillOpacity: 0.5,
-        radius: 1000,
-        shadow: true
-    }).addTo(map);
-
-    // Add a hover event
-    document.getElementById('projectSlug1').addEventListener('mouseover', function () {
-      map.setView([52.360116, 4.9195973], 14);
-    });
-
-    document.getElementById('projectSlug2').addEventListener('mouseover', function () {
-      map.setView([52.360116, 4.8195973], 14);
+      // Add a hover event
+      document.getElementById(project.slug).addEventListener('mouseover', function () {
+        map.setView([project.plaats.latitude, project.plaats.longitude], 14);
+      });
     });
 
 
