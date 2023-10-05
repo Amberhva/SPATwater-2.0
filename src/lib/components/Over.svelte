@@ -86,14 +86,6 @@
   }
 
   @media screen and (min-width: 568px) {
-    .about__description {
-      font-size: 1.2em;
-    }
-
-    .section__title {
-      font-size: 2em;
-    }
-
     .about-image {
       display: inline-block;
       margin-left: 200px;

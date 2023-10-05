@@ -140,11 +140,6 @@
     transform: scale(1.1);
   }
 
-  .swiper-container-3d .swiper-slide-shadow-left,
-  .swiper-container-3d .swiper-slide-shadow-right {
-    background-image: none;
-  }
-
   @media screen and (min-width: 720px) {
     .team {
       display: none;
