@@ -305,6 +305,7 @@
 
   #map {
     height: 85vh;
+    pointer-events: none;
   }
 
   .mobile-porject-list {
