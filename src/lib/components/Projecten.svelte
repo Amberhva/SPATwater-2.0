@@ -329,13 +329,16 @@
     .mobile-porject-list li {
       width: 20rem;
       background: var(--lg-bg);
-      box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+      box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+      border-radius: .5rem;
+      margin-bottom: .5rem;
     }
 
     .mobile-porject-list img {
       width: 8rem;
       height: 6rem;
       object-fit: cover;
+      border-radius: .5rem 0rem 0rem .5rem;
     }
 
     .horizontal-flex {
