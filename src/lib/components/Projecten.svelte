@@ -284,6 +284,8 @@
   .project-list p {
     color: #2B3F5A;
     font-size: .9rem;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
   }
 
   .project-list i {
