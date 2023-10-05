@@ -22,7 +22,7 @@
         color: '#73CA6A',
         fillColor: '#73CA6A',
         fillOpacity: 0.5,
-        radius: 2000,
+        radius: 1200,
         shadow: true,
       }).addTo(map);
 
@@ -49,12 +49,37 @@
       });
     });
 
+    var listItemsMobile = document.querySelectorAll('#projectList-mobile li');
+
+    listItemsMobile.forEach(function (item) {
+      item.addEventListener('click', function () {
+        // Remove the "active" class from all list items
+        listItemsMobile.forEach(function (li) {
+          li.classList.remove('active');
+        });
+
+        // Add the "active" class to the clicked list item
+        this.classList.add('active');
+      });
+    });
+
   });
 
 </script>
 
 <section>
-  <h2 class="mobile-h2">Projecten</h2>
+  <div class="mobile-project-header">
+    <h2>Projecten</h2>
+    <ul class="filter-item-list" id="projectList-mobile">
+            
+      <li class="active">Klimaatadaptatie</li>
+      <li>Waterkwaliteit</li>
+      <li>B-RAIN</li>
+    </ul>
+
+    <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
+
+  </div>
 
   <div class="project-view-container">
     <article class="projects">
@@ -63,8 +88,7 @@
         <div class="filter-row">
           <h2>Projecten</h2>
           <ul class="filter-item-list" id="projectList">
-            
-            <!-- Dit kan uit hygraph -->
+
             <li class="active">Klimaatadaptatie</li>
             <li>Waterkwaliteit</li>
             <li>B-RAIN</li>
@@ -104,7 +128,7 @@
 
             {#each data.projectens as project }
               <a href="/projecten/{project.slug}">
-                <li id="{project.slug}">
+                <li id="{project.slug}-mobile">
                   <div class="horizontal-flex">
                     <img src="/assets/projects2.png" alt="">
                     <div class="project-text">
@@ -147,7 +171,7 @@
     text-decoration: none;
   }
 
-  .mobile-h2 {
+  .mobile-project-header {
     display: none;
   }
 
@@ -362,9 +386,13 @@
       margin-bottom: .5rem;
     }
 
-    .mobile-h2 {
+    .mobile-project-header {
       display: block;
       padding: 0rem 0rem 1rem 2.5rem;
+    }
+
+    .mobile-project-header .searchbar {
+      width: calc(100% - 2.5rem);
     }
 }
 </style>
