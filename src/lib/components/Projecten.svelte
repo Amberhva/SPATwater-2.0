@@ -301,8 +301,8 @@
 
   .project-list p {
     color: #2B3F5A;
-    font-size: .9rem;
-    margin-bottom: 1rem;
+    font-size: .8rem;
+    margin-bottom: .5rem;
     line-height: 1.2rem;
   }
 
