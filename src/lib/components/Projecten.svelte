@@ -112,7 +112,7 @@
             <a href="/projecten/{project.slug}">
               <li id="{project.slug}">
                 <div class="horizontal-flex">
-                  <img src="/assets/projects2.png" alt="">
+                  <img src="{project.image.url}" alt="">
                   <div class="project-text">
                     <span>{project.categorie}</span>
                     <h3>{project.title}</h3>
