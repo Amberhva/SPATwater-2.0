@@ -10,7 +10,7 @@
     // Setting up map
     var map = L.map('map', {
       center: [52.360956, 4.8964073],
-      zoom: 12,
+      zoom: 10,
       minZoom: 10
     });
 
@@ -31,7 +31,7 @@
 
       // Add a hover event
       document.getElementById(project.slug).addEventListener('mouseover', function () {
-        map.setView([project.plaats.latitude, project.plaats.longitude], 14);
+        map.setView([project.plaats.latitude, project.plaats.longitude], 12);
       });
     });
 
