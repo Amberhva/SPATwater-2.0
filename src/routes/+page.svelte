@@ -25,7 +25,7 @@
 <Brain />
 <Projecten {data} />
 <Kennisbank {data} />
-<Team />
+<Team {data} />
 <Contact />
-<Partners />
+<Partners {data} />
 <Footer />
