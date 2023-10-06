@@ -218,7 +218,7 @@
   }
 
   .filter-item-list li {
-    margin-right: 5%;
+    margin-right: 1.5rem;
     padding: .2rem .6rem;
     cursor: pointer;
     font-size: .8rem;

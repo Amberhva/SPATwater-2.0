@@ -37,363 +37,225 @@
 </script>
 
 <section>
-  <h2>Kennisbank</h2>
 
-  <div class="filter-row">
-    <ul class="filter-item-list" id="projectList">
-      <li class="active">Klimaatadaptatie</li>
-      <li>Waterkwaliteit</li>
-    </ul>
-  </div>
+  <div class="filter-container">
+    
+    <h2 id="kennisbank">Kennisbank</h2>
 
-  <input
-    class="searchbar"
-    type="search"
-    id="search"
-    name="search"
-    placeholder="Zoek een artikel"
-  />
+      <div class="filter-row">
 
-  <div class="blogpost-container">
-    <div class="blogpost">
-      <img src="assets/Aquathermie.png" alt="blog foto" />
-      <h3>Titel van blog</h3>
-      <p>content blog</p>
-      <i class="fa fa-arrow-right" aria-hidden="true" />
-    </div>
+      <div class="filter-list-container">
+        <ul class="filter-item-list" id="projectList">
 
-    <div class="blogpost">
-      <img src="assets/Aquathermie.png" alt="blog foto" />
-      <h3>Titel van blog</h3>
-      <p>content blog</p>
-      <i class="fa fa-arrow-right" aria-hidden="true" />
-    </div>
-
-    <div class="blogpost">
-      <img src="assets/Aquathermie.png" alt="blog foto" />
-      <h3>Titel van blog</h3>
-      <p>content blog</p>
-      <i class="fa fa-arrow-right" aria-hidden="true" />
+          <li class="active">Alles</li>
+          <li>Klimaatadaptatie</li>
+          <li>Waterkwaliteit</li>
+          <li>B-RAIN</li>
+  
+        </ul>
+      </div>
+      
+      <div class="searchbar-container">
+        <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een post"/>
+      </div>
+      
     </div>
   </div>
 
-  <!-- Blogpage grid desktop -->
+  <div class="blog-view-container">
+    
+    <article class="main-post">
 
-  <div class="blog-container">
-    <div class="filter-row-desktop">
-      <ul class="filter-item-list-desktop" id="projectList">
-        <li class="active">Klimaatadaptatie</li>
-        <li>Waterkwaliteit</li>
-      </ul>
-    </div>
+    </article>
 
-    <input
-      class="searchbar-desktop"
-      type="search"
-      id="search"
-      name="search"
-      placeholder="Zoek een artikel"
-    />
+    <article class="blog">
+      <div class="set-max-height">
+  
+        <div class="blog-list-container">
+          <ul class="blog-list">
+  
+            {#each data.kennisbanks as post }
 
-    <div class="blogpost-desktop">
-      <img src="assets/Aquathermie.png" alt="blog foto" />
-      <div class="content-desktop">
-        <h3>Titel van blog</h3>
-        <p>content blog</p>
-        <i class="fa fa-arrow-right" aria-hidden="true" />
-      </div>
-    </div>
+            <a href="#">
+              <li id="{post.slug}">
+                <div class="horizontal-flex">
+                  <img src="{post.image.url}" alt="">
+                  <div class="blog-text">
+                    <span>{post.categorie}</span>
+                    <h3>{post.title}</h3>
+                  </div>
+                </div>
+              </li>
+            </a>
 
-    <aside class="sidebar-container">
-      <div class="blogpost1-desktop">
-        <img src="assets/Aquathermie.png" alt="blog foto" />
-
-        <div class="content-desktop">
-          <h3>Titel van blog</h3>
-          <p>content blog</p>
-          <i class="fa fa-arrow-right" aria-hidden="true" />
+            {/each}
+    
+          </ul>
         </div>
       </div>
 
-      <div class="blogpost2-desktop">
-        <img src="assets/Aquathermie.png" alt="blog foto" />
-        <div class="content-desktop">
-          <h3>Titel van blog</h3>
-          <p>content blog</p>
-          <i class="fa fa-arrow-right" aria-hidden="true" />
-        </div>
-      </div>
-
-      <div class="blogpost3-desktop">
-        <img src="assets/Aquathermie.png" alt="blog foto" />
-        <div class="content-desktop">
-          <h3>Titel van blog</h3>
-          <p>content blog</p>
-          <i class="fa fa-arrow-right" aria-hidden="true" />
-        </div>
-      </div>
-    </aside>
+    </article>
   </div>
+
 </section>
 
 <style>
+
+  /* Styling main elements */
   h2 {
-    padding-top: 4rem;
-    padding-left: 2.5rem;
-    padding-bottom: 1rem;
+    padding: 0rem;
+    padding-top: 3rem;
     color: var(--spat);
   }
 
   section {
-    height: auto;
-    padding-bottom: 2rem;
+    margin-top: 5rem;
+    height: 100%;
+    padding-bottom: 5rem;
     background: var(--lg-bg);
   }
 
-  .filter-item-list {
-    padding-top: 1rem;
-    padding-left: 2.5rem;
-    list-style: none;
+  a {
+    text-decoration: none;
+  }
+
+  .blog-view-container {
     display: flex;
     gap: 1rem;
-    align-items: left;
-    color: #2b3f5a;
+    padding: 0rem 2.5rem;
+  }
+
+  .blog {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    gap: 1rem;
+  }
+
+  .filter-container {
+    gap: 1rem;
+    padding: 0rem 2.5rem;
+  }
+
+  /* Styling of filter options */
+
+  .filter-row {
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filter-item-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 2rem 0rem 1rem 0rem;
+    color: #2B3F5A;
   }
 
   .filter-item-list li {
-    padding: 0.2rem 0.5rem;
+    margin-right: 1.5rem;
+    padding: .2rem .6rem;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: .8rem;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
   }
 
   .active {
-    background-color: #4ecd5d;
-    color: #ffffff;
-    border-radius: 0.5rem;
+    background-color: #4ECD5D;
+    color: #FFFFFF;
+    border-radius: .5rem;
+  }
+
+  .searchbar-container {
+    width: 35%;
+    margin: 2rem 0rem 1rem 0rem;
   }
 
   .searchbar {
-    width: 80%;
-    margin-left: 2.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 0.6rem;
-    border-radius: 0.5rem;
+    width: 99%;
+    padding: .5rem .6rem;
+    border-radius: .5rem;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
   }
 
   .searchbar::placeholder {
-    color: #b7b7b7;
+    color: #B7B7B7;
   }
 
-  .sidebar-container {
+  /* Styling of project list */
+  .blog-list-container {
+    height: 65vh;
+    overflow-y: scroll;
+  }
+
+  .blog-list-container::-webkit-scrollbar{
     display: none;
   }
 
-  .blogpost {
-    width: 80%;
-    background-color: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    margin-left: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  .blogpost img {
+  .blog-list {
+    list-style: none;
+    padding: 0;
     width: 100%;
-    height: 60%;
+  }
+
+  .blog-list li {
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    width: 99%;
+  }
+
+  .blog-list .horizontal-flex {
+    display: flex;
+  }
+
+  .blog-list img {
+    width: 25%;
+    aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    padding: 0;
+    margin: 0;
+    border-radius: .5rem 0rem 0rem .5rem;
   }
 
-  .blogpost-desktop {
-    display: none;
+  .blog-list .blog-text {
+    padding: .5rem 1rem;
+    position: relative;
   }
 
-  .blog-container {
-    display: none;
+  .blog-list span {
+    color: #2B3F5A;
+    font-weight: 600;
+    font-size: .9rem;
   }
 
-  @media only screen and (min-width: 1240px) {
-    .filter-row {
-      display: none;
-    }
+  .blog-list h3 {
+    color: #7FAEC5;
+    margin-bottom: .5rem;
+  }
 
-    .blogpost-container {
-      display: none;
-    }
+  .main-post {
+    width: 65%;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+    border-radius: .5rem;
+    background-color: #FFFFFF;
+  }
 
-    .blog-container {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.7fr;
-      grid-template-rows: 0.1fr 2.6fr;
-      gap: 1.5rem;
-      margin-right: 2.5rem;
-      grid-template-areas:
-        "filter search"
-        "aanbevolen aside";
-    }
-    .searchbar {
-      display: none;
-    }
+  #map {
+    height: 85vh;
+    pointer-events: none;
+  }
 
-    .searchbar-desktop {
-      grid-area: search;
-      width: 93%;
-      height: 2.5rem;
-      margin-left: 2.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      border: none;
-      box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-    }
-
-    .filter-row-desktop {
-      grid-area: filter;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .filter-item-list-desktop {
-      padding-left: 2.5rem;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      align-items: left;
-      color: #2b3f5a;
-      grid-area: filter;
-    }
-
-    .filter-item-list-desktop li {
-      padding: 0.2rem 0.5rem;
-      cursor: pointer;
-      font-size: 1rem;
-      -webkit-user-select: none; /* Safari */
-      -ms-user-select: none; /* IE 10 and IE 11 */
-      user-select: none; /* Standard syntax */
-    }
-
-    aside {
-      grid-area: aside;
-    }
-
-    .blogpost-desktop {
-      height: 40rem;
-      display: flex;
-      background-color: #ffffff;
-      box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-left: 2.5rem;
-      margin-bottom: 1rem;
-      display: block;
-      margin-left: 2.5rem;
-      grid-area: aanbevolen;
-    }
-
-    .blogpost-desktop img {
-      width: 100%;
-      height: 35%;
-      object-fit: cover;
-    }
-
-    .blogpost-desktop i {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding: 0.6rem 1.2rem;
-      color: #73ca6a;
-      transition: 0.2s;
-    }
-
-    /* sidebar */
-    .sidebar-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.2fr 0.2fr 0.2fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "blog1"
-        "blog2"
-        "blog3";
-    }
-    .blogpost1-desktop {
-      height: 10rem;
-      display: flex;
-      background-color: #ffffff;
-      box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-left: 2.5rem;
-      margin-bottom: 1rem;
-      grid-area: blog1;
-    }
-
-    .blogpost1-desktop img {
-      width: 30%;
-      object-fit: cover;
-      padding: 0;
-      margin: 0;
-      border-radius: 0.5rem 0rem 0rem 0.5rem;
-    }
-
-    .blogpost1-desktop i {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding: 0.6rem 1.2rem;
-      color: #73ca6a;
-      transition: 0.2s;
-    }
-
-    .blogpost1-desktop i:hover {
-      transform: translateX(0.5rem);
-    }
-
-    .blogpost2-desktop {
-      height: 10rem;
-      display: flex;
-      background-color: #ffffff;
-      box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-left: 2.5rem;
-      margin-bottom: 1rem;
-      grid-area: blog2;
-    }
-    .blogpost2-desktop img {
-      width: 30%;
-      object-fit: cover;
-      padding: 0;
-      margin: 0;
-      border-radius: 0.5rem 0rem 0rem 0.5rem;
-    }
-
-    .blogpost3-desktop {
-      height: 10rem;
-      display: flex;
-      background-color: #ffffff;
-      box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-left: 2.5rem;
-      margin-bottom: 1rem;
-      grid-area: blog3;
-    }
-
-    .blogpost3-desktop img {
-      width: 30%;
-      object-fit: cover;
-      padding: 0;
-      margin: 0;
-      border-radius: 0.5rem 0rem 0rem 0.5rem;
-    }
+  /* Mobiele weergaven */
+  @media only screen and (max-width: 1100px) {
+    
   }
 </style>
