@@ -38,7 +38,7 @@
 
 
     // Add a click event listener to the list items to toggle the "active" class
-    var listItems = document.querySelectorAll('#projectList li');
+    var listItems = document.querySelectorAll('#filterList li');
 
     listItems.forEach(function (item) {
       item.addEventListener('click', function () {
@@ -53,7 +53,7 @@
     });
 
     // Add mobile logic for the same function as above
-    var listItemsMobile = document.querySelectorAll('#projectList-mobile li');
+    var listItemsMobile = document.querySelectorAll('#filterList-mobile li');
 
     listItemsMobile.forEach(function (item) {
       item.addEventListener('click', function () {
@@ -74,7 +74,7 @@
 <section>
   <div class="mobile-project-header">
     <h2>Projecten</h2>
-    <ul class="filter-item-list" id="projectList-mobile">
+    <ul class="filter-item-list" id="filterList-mobile">
             
       <li class="active">Klimaatadaptatie</li>
       <li>Waterkwaliteit</li>
@@ -93,7 +93,7 @@
         <span class="anchor" id="projecten"></span>
         <div class="filter-row">
           <h2>Projecten</h2>
-          <ul class="filter-item-list" id="projectList">
+          <ul class="filter-item-list" id="filterList">
 
             <li class="active">Klimaatadaptatie</li>
             <li>Waterkwaliteit</li>
@@ -326,6 +326,8 @@
   #map {
     height: 85vh;
     pointer-events: none;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
   }
 
   .mobile-porject-list {
@@ -334,6 +336,10 @@
 
   /* Mobiele weergaven */
   @media only screen and (max-width: 1100px) {
+    section {
+      height: 80vh;
+    }
+
     #map {
       height: 65vh;
       pointer-events: none;
@@ -421,6 +427,16 @@
     /* Remove the scrollbar from mobile view */
     .mobile-project-header .searchbar {
       width: calc(100% - 2.5rem);
+    }
+
+    .filter-item-list li {
+      margin-right: .1rem;
+      padding: .2rem .6rem;
+      cursor: pointer;
+      font-size: .7rem;
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
     }
 }
 </style>
