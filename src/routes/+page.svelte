@@ -24,8 +24,8 @@
 <Waterkwaliteit />
 <Brain />
 <Projecten {data} />
-<Kennisbank />
-<Team />
+<Kennisbank {data} />
+<Team {data} />
 <Contact />
-<Partners />
+<Partners {data} />
 <Footer />

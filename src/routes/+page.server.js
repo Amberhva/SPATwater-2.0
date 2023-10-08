@@ -3,18 +3,34 @@ import { hygraph } from '$lib/utils/hygraph.js'
 
 export async function load() {
   let query = gql`
-  query Projectens {
+  query SPATquery {
     projectens {
-        id
-        categorie
-        intro
-        plaats {
-            latitude
-            longitude
-        }
-        publishedAt
-        slug
-        title
+      categorie
+      createdAt
+      intro
+      plaats {
+        latitude
+        longitude
+      }
+      image {
+        url
+      }
+      title
+      slug
+    }
+    kennisbanks {
+      author
+      categorie
+      createdAt
+      date
+      image {
+        url
+      }
+      title
+      content {
+        html
+      }
+      slug
     }
   }
   ` 

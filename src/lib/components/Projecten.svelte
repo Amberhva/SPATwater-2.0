@@ -4,19 +4,22 @@
 
   import { onMount } from 'svelte';
 
+  // Write client side JavaScript inside here
   onMount(() => {
 
+    // Setting up map
     var map = L.map('map', {
       center: [52.360956, 4.8964073],
-      zoom: 12,
+      zoom: 10,
       minZoom: 10
     });
 
     // Leaflet map theme
-    var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
 
-    // Loop through data.projectens
+    // Loop through projecten
     data.projectens.forEach((project, index) => {
+
       // Create a marker for each project
       const marker = L.circle([project.plaats.latitude, project.plaats.longitude], {
         color: '#73CA6A',
@@ -28,14 +31,14 @@
 
       // Add a hover event
       document.getElementById(project.slug).addEventListener('mouseover', function () {
-        map.setView([project.plaats.latitude, project.plaats.longitude], 14);
+        map.setView([project.plaats.latitude, project.plaats.longitude], 12);
       });
     });
 
 
 
     // Add a click event listener to the list items to toggle the "active" class
-    var listItems = document.querySelectorAll('#projectList li');
+    var listItems = document.querySelectorAll('#filterList li');
 
     listItems.forEach(function (item) {
       item.addEventListener('click', function () {
@@ -49,7 +52,8 @@
       });
     });
 
-    var listItemsMobile = document.querySelectorAll('#projectList-mobile li');
+    // Add mobile logic for the same function as above
+    var listItemsMobile = document.querySelectorAll('#filterList-mobile li');
 
     listItemsMobile.forEach(function (item) {
       item.addEventListener('click', function () {
@@ -70,11 +74,12 @@
 <section>
   <div class="mobile-project-header">
     <h2>Projecten</h2>
-    <ul class="filter-item-list" id="projectList-mobile">
+    <ul class="filter-item-list" id="filterList-mobile">
             
       <li class="active">Klimaatadaptatie</li>
       <li>Waterkwaliteit</li>
       <li>B-RAIN</li>
+
     </ul>
 
     <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
@@ -83,15 +88,17 @@
 
   <div class="project-view-container">
     <article class="projects">
+
       <div class="set-max-height">
         <span class="anchor" id="projecten"></span>
         <div class="filter-row">
           <h2>Projecten</h2>
-          <ul class="filter-item-list" id="projectList">
+          <ul class="filter-item-list" id="filterList">
 
             <li class="active">Klimaatadaptatie</li>
             <li>Waterkwaliteit</li>
             <li>B-RAIN</li>
+
           </ul>
   
           <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
@@ -101,10 +108,11 @@
           <ul class="project-list">
   
             {#each data.projectens as project }
-            <a href="/projecten/{project.slug}">
+
+            <a href="/projecten/{project.slug}" target="_blank">
               <li id="{project.slug}">
                 <div class="horizontal-flex">
-                  <img src="/assets/projects2.png" alt="">
+                  <img src="{project.image.url}" alt="">
                   <div class="project-text">
                     <span>{project.categorie}</span>
                     <h3>{project.title}</h3>
@@ -114,20 +122,23 @@
                 </div>
               </li>
             </a>
+
             {/each}
     
           </ul>
         </div>
       </div>
+
     </article>
-  
     <article class="project-map">
+
       <div id="map">
         <div class="mobile-porject-list">
           <ul>
 
             {#each data.projectens as project }
-              <a href="/projecten/{project.slug}">
+
+              <a href="/projecten/{project.slug}" target="_blank">
                 <li id="{project.slug}-mobile">
                   <div class="horizontal-flex">
                     <img src="/assets/projects2.png" alt="">
@@ -138,17 +149,21 @@
                   </div>
                 </li>
               </a>
+
             {/each}
             
           </ul>
         </div>
       </div>
+
     </article>
   </div>
 
 </section>
 
 <style>
+
+  /* Styling main elements */
   h2 {
     padding: 0rem;
     color: var(--spat);
@@ -163,7 +178,7 @@
 
   section {
     margin-top: 5rem;
-    height: 100vh;
+    height: 95vh;
     background: white;
   }
 
@@ -203,7 +218,7 @@
   }
 
   .filter-item-list li {
-    margin-right: 5%;
+    margin-right: 1.5rem;
     padding: .2rem .6rem;
     cursor: pointer;
     font-size: .8rem;
@@ -286,8 +301,8 @@
 
   .project-list p {
     color: #2B3F5A;
-    font-size: .9rem;
-    margin-bottom: 1rem;
+    font-size: .8rem;
+    margin-bottom: .5rem;
     line-height: 1.2rem;
   }
 
@@ -311,6 +326,8 @@
   #map {
     height: 85vh;
     pointer-events: none;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
   }
 
   .mobile-porject-list {
@@ -319,6 +336,10 @@
 
   /* Mobiele weergaven */
   @media only screen and (max-width: 1100px) {
+    section {
+      height: 80vh;
+    }
+
     #map {
       height: 65vh;
       pointer-events: none;
@@ -336,6 +357,7 @@
       width: 100%;
     }
 
+    /* Styling mobile view of projects inside map */
     .mobile-porject-list {
       display: block;
       position: absolute;
@@ -402,8 +424,19 @@
       padding: 0rem 0rem 1rem 2.5rem;
     }
 
+    /* Remove the scrollbar from mobile view */
     .mobile-project-header .searchbar {
       width: calc(100% - 2.5rem);
+    }
+
+    .filter-item-list li {
+      margin-right: .1rem;
+      padding: .2rem .6rem;
+      cursor: pointer;
+      font-size: .7rem;
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
     }
 }
 </style>
