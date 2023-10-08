@@ -109,7 +109,7 @@
   
             {#each data.projectens as project }
 
-            <a href="/projecten/{project.slug}">
+            <a href="/projecten/{project.slug}" target="_blank">
               <li id="{project.slug}">
                 <div class="horizontal-flex">
                   <img src="{project.image.url}" alt="">
@@ -138,7 +138,7 @@
 
             {#each data.projectens as project }
 
-              <a href="/projecten/{project.slug}">
+              <a href="/projecten/{project.slug}" target="_blank">
                 <li id="{project.slug}-mobile">
                   <div class="horizontal-flex">
                     <img src="/assets/projects2.png" alt="">

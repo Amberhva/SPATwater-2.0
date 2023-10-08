@@ -1,5 +1,6 @@
 <script>
-    // export let data
+    export let data;
+    console.log(data)
   
     import Navbar from "$lib/components/Navbar.svelte";
     import Footer from "$lib/components/Footer.svelte";
@@ -8,7 +9,17 @@
   <Navbar />
 
   <main>
-    <h1>Titel ofzo</h1>
+    {#if data.project}
+      {#if data.project.image && data.project.image.url}
+        <img src={data.project.image.url} alt={data.project.title} />
+      {/if}
+
+      <h1>{data.project.title}</h1>
+      <p>{data.project.intro}</p>
+    {:else}
+
+      <p>Project not found.</p>
+    {/if}
   </main>
   
   <Footer />
