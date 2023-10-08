@@ -10,6 +10,7 @@
 <p class="brain_description">B-rain wil bewoners positief betrokken houden bij het bufferen van regenwater en het groen houden van hun tuin. Door enkele gegevens in een app aan te geven, geeft deze app terug wanneer de regenwaterbuffer vol zit, wanneer deze geleegd moet worden (als er bijvoorbeeld een grote regenbui aan komt) en wanneer het lang niet regent (waardoor je zoveel mogelijk water in de regenwaterbuffer wil vasthouden). 
 </p>
 
+<img src="assets/bRAIN.png" alt="bRAIN image" class="brain_image">
 </section>
 
 <style>
@@ -36,5 +37,10 @@ span{
     font-size: 0.8rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
+}
+
+.brain_image{
+    transition: 0.3s;
+    width: 100%;
 }
 </style>
