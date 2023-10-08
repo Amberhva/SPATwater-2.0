@@ -25,14 +25,14 @@
   section {
     height: 100vh;
     background: var(--lg-bg);
-    padding: 5rem 2.5rem;
+    padding: 6rem 5.5rem;
     overflow: hidden;
   }
 
 @media screen and (min-width: 650px){
 main{
     display:grid;
-    gap: 1em;
+    gap: 2em;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -66,7 +66,7 @@ span{
 
 @media screen and (min-width: 650px){
 .brain_image{
-    width: 100%;
+    width: 80%;
     margin-top:2em;
 }
 }

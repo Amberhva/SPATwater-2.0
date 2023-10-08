@@ -41,7 +41,7 @@ h2 {
 
 section {
     height: 100vh;
-    padding: 5rem 2.5rem;
+    padding: 6rem 5.5rem;
     overflow: hidden;
 }
 
@@ -59,14 +59,14 @@ section{
 
 @media screen and (min-width: 750px){
 section{
-    height: 70vh;
+    height: 100vh;
 }
 }
 
 @media screen and (min-width: 650px){
 main{
     display:flex;
-    gap: 1em;
+    gap: 2em;
     flex-direction: row-reverse;
     margin-top: 3em;
 }
