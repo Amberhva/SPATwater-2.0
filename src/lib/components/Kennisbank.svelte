@@ -80,70 +80,129 @@
   </div>
 
   <div class="blog-view-container">
-    <article class="main-post">
-      {#if data.kennisbanks.length > 0}
-        <img src={lastPost.image.url} alt="" />
+    <div class="latest">
+      <article class="main-post">
+        {#if data.kennisbanks.length > 0}
+          <img src={lastPost.image.url} alt="" />
 
-        <div class="content-field">
-          <span class="category">{lastPost.categorie}</span>
+          <div class="content-field">
+            <span class="category">{lastPost.categorie}</span>
 
-          <span class="author">Door {lastPost.author} op {lastPost.date}</span>
-
-          <h3>{lastPost.title}</h3>
-
-          <div class="hygraph-html">
-            {@html lastPost.content.html}
-          </div>
-        </div>
-
-        <div class="read-more-footer">
-          <div class="read-more-container">
-            <a class="read-more-link" href="/post/{lastPost.slug}"
-              >Verder lezen</a
+            <span class="author">Door {lastPost.author} op {lastPost.date}</span
             >
+
+            <h3>{lastPost.title}</h3>
+
+            <div class="hygraph-html">
+              {@html lastPost.content.html}
+            </div>
           </div>
-        </div>
-      {/if}
-    </article>
 
-    <article class="blog">
-      <div class="set-max-height">
-        <div class="blog-list-container">
-          <ul class="blog-list">
-            {#each data.kennisbanks as post}
-              <a href="/post/{post.slug}">
-                <li id={post.slug}>
-                  <img src={post.image.url} alt="" />
+          <div class="read-more-footer">
+            <div class="read-more-container">
+              <a class="read-more-link" href="/post/{lastPost.slug}"
+                >Verder lezen</a
+              >
+            </div>
+          </div>
+        {/if}
+      </article>
+    </div>
 
-                  <div class="blog-text">
-                    <div class="blog-info-row">
-                      <span class="category">{post.categorie}</span>
+    <div class="blog2">
+      <article class="main-post2">
+        {#each data.kennisbanks as post}
+          <img src={post.image.url} alt="" />
 
-                      <span class="author"
-                        >Door {post.author} op {post.date}</span
+          <div class="content-field">
+            <span class="category">{post.categorie}</span>
+
+            <span class="author">Door {post.author} op {post.date}</span>
+
+            <h3>{post.title}</h3>
+
+            <div class="hygraph-html">
+              {@html post.content.html}
+            </div>
+          </div>
+
+          <div class="read-more-footer">
+            <div class="read-more-container">
+              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
+              >
+            </div>
+          </div>
+        {/each}
+      </article>
+    </div>
+
+    <div class="blog3">
+      <article class="main-post3">
+        {#each data.kennisbanks as post}
+          <img src={post.image.url} alt="" />
+
+          <div class="content-field">
+            <span class="category">{post.categorie}</span>
+
+            <span class="author">Door {post.author} op {post.date}</span>
+
+            <h3>{post.title}</h3>
+
+            <div class="hygraph-html">
+              {@html post.content.html}
+            </div>
+          </div>
+
+          <div class="read-more-footer">
+            <div class="read-more-container">
+              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
+              >
+            </div>
+          </div>
+        {/each}
+      </article>
+    </div>
+
+    <div class="bloglist">
+      <article class="blog">
+        <div class="set-max-height">
+          <div class="blog-list-container">
+            <ul class="blog-list">
+              {#each data.kennisbanks as post}
+                <a href="/post/{post.slug}">
+                  <li id={post.slug}>
+                    <img src={post.image.url} alt="" />
+
+                    <div class="blog-text">
+                      <div class="blog-info-row">
+                        <span class="category">{post.categorie}</span>
+
+                        <span class="author"
+                          >Door {post.author} op {post.date}</span
+                        >
+                      </div>
+
+                      <h3>{post.title}</h3>
+
+                      <p class="intro-text">
+                        Het is tijd om Nederlanders bewust te maken van de
+                        hoeveelheid regenwater op- en rondom het huis. Onze
+                        oplossing is het grootschalig inzetten van
+                        micro-maatregelen.
+                      </p>
+
+                      <a class="read-more-small" href="/post/{post.slug}">
+                        <i class="fa fa-arrow-right" aria-hidden="true" /></a
                       >
                     </div>
-
-                    <h3>{post.title}</h3>
-
-                    <p class="intro-text">
-                      Het is tijd om Nederlanders bewust te maken van de
-                      hoeveelheid regenwater op- en rondom het huis. Onze
-                      oplossing is het grootschalig inzetten van
-                      micro-maatregelen.
-                    </p>
-
-                    <a class="read-more-small" href="/post/{post.slug}">
-                      <i class="fa fa-arrow-right" aria-hidden="true" /></a
-                    >
-                  </div>
-                </li>
-              </a>
-            {/each}
-          </ul>
+                  </li>
+                </a>
+              {/each}
+            </ul>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -151,8 +210,7 @@
   /* Styling main elements */
 
   h2 {
-    padding: 0rem;
-    padding-top: 3rem;
+    padding-top: 6rem;
     color: var(--spat);
   }
 
@@ -176,13 +234,47 @@
   }
 
   .blog-view-container {
+    display: grid;
+    padding: 0.7rem 2.5rem;
+    grid-template-columns: 0.9fr 0.9fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+      "latest latest bloglist"
+      "blog2 blog3 bloglist";
+  }
+
+  .latest {
+    grid-area: latest;
+  }
+
+  .blog2 {
+    background-color: #ffffff;
+    height: 22rem;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
     display: flex;
-    gap: 1rem;
-    padding: 0rem 2.5rem;
+    grid-area: blog2;
+  }
+
+  .blog3 {
+    height: 20rem;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    grid-area: blog3;
+  }
+
+  .bloglist {
+    grid-area: bloglist;
   }
 
   .blog {
-    width: 35%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     height: 85vh;
@@ -195,15 +287,21 @@
   }
 
   .hygraph-html {
-    width: 28rem;
+    max-width: 25rem;
     padding-top: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
 
   /* Styling of filter options */
 
   .filter-row {
-    height: 10vh;
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
   }
@@ -212,6 +310,8 @@
     list-style: none;
     padding: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 2rem 0rem 1rem 0rem;
     color: #2b3f5a;
   }
@@ -233,13 +333,11 @@
   }
 
   .searchbar-container {
-    width: 35%;
-
-    margin: 2rem 0rem 1rem 0rem;
+    margin: 1rem 0rem 1rem 0rem;
   }
 
   .searchbar {
-    width: 99%;
+    width: 29rem;
     padding: 0.5rem 0.6rem;
     border-radius: 0.5rem;
     border: none;
@@ -324,7 +422,7 @@
   }
 
   .main-post {
-    width: 65%;
+    width: 100%;
     height: 35vh;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
@@ -341,24 +439,47 @@
   }
 
   .main-post .content-field {
+    max-width: 27rem;
     padding: 1.5rem;
   }
 
-  .main-post span {
+  .main-post span,
+  .main-post2 span,
+  .main-post3 span {
     color: #2b3f5a;
     font-weight: 600;
     font-size: 0.9rem;
   }
 
-  .main-post h3 {
+  .main-post h3,
+  .main-post2 h3,
+  .main-post3 h3 {
     color: #7faec5;
     margin-bottom: 0.5rem;
+  }
+
+  .main-post2 img,
+  .main-post3 img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  }
+
+  .main-post2,
+  .main-post3 {
+    overflow: hidden;
+  }
+
+  .main-post3 img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
   }
 
   .read-more-container {
     position: relative;
     height: 100%;
-    right: 1.5rem;
   }
 
   .read-more-link {
@@ -403,6 +524,15 @@
       width: 100%;
     }
 
+    .blog-view-container {
+      display: block;
+    }
+
+    .blog2,
+    .blog3 {
+      display: none;
+    }
+
     .main-post {
       display: none;
     }
@@ -427,7 +557,7 @@
     .blog-list li {
       display: flex;
       flex-direction: column;
-      height: 18rem;
+      height: 23rem;
     }
 
     .blog-list img {
