@@ -67,7 +67,7 @@
     list-style: none;
     margin: 20px 0;
     border-bottom: 2px solid black;
-    width: 8rem;
+    margin-left: 2rem;
   }
 
   /* Navbar */
