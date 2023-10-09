@@ -126,8 +126,8 @@
 
                     <h3>{post.title}</h3>
 
-                    <a class="read-more-small" href="/post/{post.slug}"
-                      >Artikel bekijken</a
+                    <a class="read-more-small" href="/post/{post.slug}">
+                      <i class="fa fa-arrow-right" aria-hidden="true" /></a
                     >
                   </div>
                 </li>
@@ -365,20 +365,17 @@
     border-radius: 0.5rem;
   }
 
-  .read-more-small {
+  .read-more-small i {
+    position: absolute;
+    right: 0;
     bottom: 0;
-    padding: 0.2rem 0rem;
-    cursor: pointer;
-    font-size: 0.8rem;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-    border-radius: 0.5rem;
-    color: #7faec5;
+    padding: 0.6rem 1.2rem;
+    color: #73ca6a;
+    transition: 0.2s;
   }
 
-  .read-more-small:hover {
-    text-decoration: underline;
+  .read-more-small:hover i {
+    transform: translateX(0.5rem);
   }
 
   #map {
