@@ -190,7 +190,7 @@
 
   .blog-view-container {
     display: grid;
-    padding: 1rem 2rem;
+    padding: 0.7rem 2rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1fr;
     gap: 2rem;
@@ -237,7 +237,7 @@
 
   .filter-container {
     gap: 1rem;
-    padding: 0rem 2.5rem;
+    padding: 0rem 2rem;
   }
 
   .hygraph-html {
@@ -248,8 +248,8 @@
   /* Styling of filter options */
 
   .filter-row {
-    height: 10vh;
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
   }
@@ -258,6 +258,8 @@
     list-style: none;
     padding: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 2rem 0rem 1rem 0rem;
     color: #2b3f5a;
   }
@@ -279,13 +281,11 @@
   }
 
   .searchbar-container {
-    width: 35%;
-
-    margin: 2rem 0rem 1rem 0rem;
+    margin: 1rem 0rem 1rem 0rem;
   }
 
   .searchbar {
-    width: 99%;
+    width: 29rem;
     padding: 0.5rem 0.6rem;
     border-radius: 0.5rem;
     border: none;
