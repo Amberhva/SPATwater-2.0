@@ -33,10 +33,6 @@ SPATwater biedt hulp aan organisaties bij het identificeren van de implicaties v
 
 <style>
 
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
 h2 {
     color: var(--spat);
     font-size: 1.4rem;
@@ -45,20 +41,45 @@ h2 {
 
 section {
     height: 100vh;
-    padding: 5rem 2.5rem;
+    padding: 6rem 5.5rem;
     overflow: hidden;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 650px){
+section{
+    height: 90vh;
+}
+}
+
+@media screen and (min-width: 700px){
+section{
+    height: 80vh;
+}
+}
+
+@media screen and (min-width: 750px){
+section{
+    height: 100vh;
+}
+}
+
+@media screen and (min-width: 650px){
 main{
-    display:grid;
-    gap: 1em;
-    grid-template-columns: 1fr 1fr;
+    display:flex;
+    gap: 2em;
+    flex-direction: row-reverse;
+    margin-top: 3em;
 }
 }
 
 article:first-child{
-grid-column-start: 2;
+    width: 100%;
+}
+
+@media screen and (min-width: 650px){
+article:first-child{
+    width: 60%;
+}
 }
 
 span{
@@ -70,7 +91,6 @@ p.waterkwaliteit_description, .arrow_section{
     display: block;
     font-size: 0.8rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;
 }
 
 svg{
@@ -84,10 +104,10 @@ svg{
     width: 100%;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 650px){
 .img_aquathermie{
-display: grid;
-grid-column-start: 1; 
+    display: flex;
+    flex-grow: 4;
 }
 }
 

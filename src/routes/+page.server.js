@@ -28,7 +28,10 @@ export async function load() {
       }
       title
       content {
+        raw
         html
+        markdown
+        text
       }
       slug
     }
