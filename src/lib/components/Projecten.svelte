@@ -2,6 +2,14 @@
   export let data;
   // console.log(data)
 
+  // Filter options
+  let projectFilterOption = ""
+
+  function changeFilter(option) {
+    let projectFilterOption = option
+    console.log(projectFilterOption)
+  }
+
   import { onMount } from 'svelte';
 
   // Write client side JavaScript inside here
@@ -76,7 +84,7 @@
     <h2>Projecten</h2>
     <ul class="filter-item-list" id="filterList-mobile">
             
-      <li class="active">Klimaatadaptatie</li>
+      <li class="active" onclick="changeFilter(Klimaatadaptatie)">Klimaatadaptatie</li>
       <li>Waterkwaliteit</li>
       <li>B-RAIN</li>
 
@@ -104,7 +112,7 @@
           <ul class="project-list">
             {#each data.projectens as project }
             
-            <a href="/projecten/{project.slug}" target="_blank">
+            <a href="/projecten/{project.slug}">
               <li id="{project.slug}">
                 <div class="horizontal-flex">
                   <img src="{project.image.url}" alt="">
@@ -130,10 +138,10 @@
           <ul>
             {#each data.projectens as project }
 
-              <a href="/projecten/{project.slug}" target="_blank">
+              <a href="/projecten/{project.slug}">
                 <li id="{project.slug}-mobile">
                   <div class="horizontal-flex">
-                    <img src="/assets/projects2.png" alt="">
+                    <img src="{project.image.url}" alt="">
                     <div class="project-text">
                       <span>{project.categorie}</span>
                       <h3>{project.title}</h3>

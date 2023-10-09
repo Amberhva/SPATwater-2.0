@@ -5,7 +5,9 @@
 
   // Get the last post from the array
 
-  let lastPost = data.kennisbanks[data.kennisbanks.length - 1];
+  let lastPost1 = data.kennisbanks[data.kennisbanks.length - 1];
+  let lastPost2 = data.kennisbanks[data.kennisbanks.length - 2];
+  let lastPost3 = data.kennisbanks[data.kennisbanks.length - 3];
 
   import { onMount } from "svelte";
 
@@ -83,24 +85,23 @@
     <div class="latest">
       <article class="main-post">
         {#if data.kennisbanks.length > 0}
-          <img src={lastPost.image.url} alt="" />
+          <img src={lastPost1.image.url} alt="" />
 
           <div class="content-field">
-            <span class="category">{lastPost.categorie}</span>
+            <span class="category">{lastPost1.categorie}</span>
 
-            <span class="author">Door {lastPost.author} op {lastPost.date}</span
+            <span class="author"
+              >Door {lastPost1.author} op {lastPost1.date}</span
             >
 
-            <h3>{lastPost.title}</h3>
+            <h3>{lastPost1.title}</h3>
 
             <div class="hygraph-html">
-              {@html lastPost.content.html}
+              {@html lastPost1.content.html}
             </div>
-          </div>
 
-          <div class="read-more-footer">
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{lastPost.slug}"
+              <a class="read-more-link" href="/post/{lastPost1.slug}"
                 >Verder lezen</a
               >
             </div>
@@ -111,55 +112,57 @@
 
     <div class="blog2">
       <article class="main-post2">
-        {#each data.kennisbanks as post}
-          <img src={post.image.url} alt="" />
+        {#if data.kennisbanks.length > 0}
+          <img src={lastPost2.image.url} alt="" />
 
-          <div class="content-field">
-            <span class="category">{post.categorie}</span>
+          <div class="content-field2">
+            <span class="category2">{lastPost2.categorie}</span>
 
-            <span class="author">Door {post.author} op {post.date}</span>
-
-            <h3>{post.title}</h3>
-
-            <div class="hygraph-html">
-              {@html post.content.html}
-            </div>
+            <span class="author2"
+              >Door {lastPost2.author} op {lastPost2.date}</span
+            >
           </div>
 
-          <div class="read-more-footer">
-            <div class="read-more-container">
-              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
-              >
-            </div>
+          <h3>{lastPost2.title}</h3>
+
+          <div class="hygraph-html2">
+            {@html lastPost2.content.html}
           </div>
-        {/each}
+
+          <div class="read-more-container2">
+            <a class="read-more-link2" href="/post/{lastPost2.slug}"
+              >Verder lezen</a
+            >
+          </div>
+        {/if}
       </article>
     </div>
 
     <div class="blog3">
       <article class="main-post3">
-        {#each data.kennisbanks as post}
-          <img src={post.image.url} alt="" />
+        {#if data.kennisbanks.length > 0}
+          <img src={lastPost3.image.url} alt="" />
 
-          <div class="content-field">
-            <span class="category">{post.categorie}</span>
+          <div class="content-field3">
+            <span class="category3">{lastPost3.categorie}</span>
 
-            <span class="author">Door {post.author} op {post.date}</span>
-
-            <h3>{post.title}</h3>
-
-            <div class="hygraph-html">
-              {@html post.content.html}
-            </div>
+            <span class="author3"
+              >Door {lastPost3.author} op {lastPost3.date}</span
+            >
           </div>
 
-          <div class="read-more-footer">
-            <div class="read-more-container">
-              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
-              >
-            </div>
+          <h3>{lastPost3.title}</h3>
+
+          <div class="hygraph-html3">
+            {@html lastPost3.content.html}
           </div>
-        {/each}
+
+          <div class="read-more-container3">
+            <a class="read-more-link3" href="/post/{lastPost3.slug}"
+              >Verder lezen</a
+            >
+          </div>
+        {/if}
       </article>
     </div>
 
@@ -210,7 +213,7 @@
   /* Styling main elements */
 
   h2 {
-    padding-top: 3rem;
+    padding-top: 6rem;
     color: var(--spat);
   }
 
@@ -236,9 +239,10 @@
   .blog-view-container {
     display: grid;
     padding: 0.7rem 2.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-columns: 0.9fr 0.9fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
     gap: 2rem;
+    row-gap: 1rem;
     grid-template-areas:
       "latest latest bloglist"
       "blog2 blog3 bloglist";
@@ -250,21 +254,19 @@
 
   .blog2 {
     background-color: #ffffff;
-    height: 20rem;
+    height: 25rem;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
     border-radius: 0.5rem;
     cursor: pointer;
-    display: flex;
     grid-area: blog2;
   }
 
   .blog3 {
-    height: 20rem;
+    height: 25rem;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
     border-radius: 0.5rem;
     cursor: pointer;
-    display: flex;
     grid-area: blog3;
   }
 
@@ -286,8 +288,46 @@
   }
 
   .hygraph-html {
-    width: 28rem;
-    padding-top: 0.5rem;
+    max-width: 25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  .hygraph-html2 {
+    max-width: 25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding-left: 1.5rem;
+  }
+
+  .hygraph-html3 {
+    max-width: 25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding-left: 1.5rem;
+  }
+
+  .content-field2,
+  .content-field3 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    color: #2b3f5a;
   }
 
   /* Styling of filter options */
@@ -388,6 +428,12 @@
     right: 1.5rem;
   }
 
+  .author2,
+  .author3 {
+    font-size: 0.7rem !important;
+    padding-top: 0.2rem;
+  }
+
   .blog-list img {
     width: 10rem;
     height: auto;
@@ -416,7 +462,7 @@
 
   .main-post {
     width: 100%;
-    height: 35vh;
+    height: 17rem;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
     border-radius: 0.5rem;
@@ -432,6 +478,7 @@
   }
 
   .main-post .content-field {
+    max-width: 27rem;
     padding: 1.5rem;
   }
 
@@ -446,10 +493,20 @@
     margin-bottom: 0.5rem;
   }
 
-  .main-post2 img {
+  .main-post2 h3,
+  .main-post3 h3 {
+    padding-left: 1.5rem;
+    color: #7faec5;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .main-post2 img,
+  .main-post3 img {
     width: 100%;
     height: 10rem;
     object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
   }
 
   .main-post2,
@@ -457,32 +514,35 @@
     overflow: hidden;
   }
 
-  .main-post3 img {
-    width: 100%;
-    height: 10rem;
-    object-fit: cover;
+  .read-more-container {
+    margin-top: 1.8rem;
   }
 
-  .read-more-container {
-    position: relative;
-    height: 100%;
-    right: 1.5rem;
+  .read-more-container2,
+  .read-more-container3 {
+    height: 5rem;
+    margin-top: 1.8rem;
+    margin-left: 1.5rem;
   }
 
   .read-more-link {
-    position: absolute;
     width: 6.5rem;
     bottom: 1rem;
     padding: 0.4rem 0.6rem;
     cursor: pointer;
-    font-size: 0.8rem;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    font-size: 1rem;
     background-color: #4ecd5d;
     color: #ffffff;
     border-radius: 0.5rem;
+  }
+
+  .read-more-link2,
+  .read-more-link3 {
+    background-color: #4ecd5d;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    width: 6.5rem;
   }
 
   .read-more-small i {

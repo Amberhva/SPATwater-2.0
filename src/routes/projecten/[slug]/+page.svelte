@@ -82,6 +82,11 @@
       text-align: center;
     }
 
+    :global(a) { 
+      color: #7FAEC5;
+      text-decoration: none;
+    }
+
     /* :global(blockquote):before { 
       content: '"';
       font-size: 5rem;
