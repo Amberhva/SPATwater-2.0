@@ -210,7 +210,7 @@
   /* Styling main elements */
 
   h2 {
-    padding-top: 3rem;
+    padding-top: 6rem;
     color: var(--spat);
   }
 
@@ -236,8 +236,8 @@
   .blog-view-container {
     display: grid;
     padding: 0.7rem 2.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-columns: 0.9fr 0.9fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
     gap: 2rem;
     grid-template-areas:
       "latest latest bloglist"
@@ -250,10 +250,11 @@
 
   .blog2 {
     background-color: #ffffff;
-    height: 20rem;
+    height: 22rem;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
     border-radius: 0.5rem;
     cursor: pointer;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
     display: flex;
     grid-area: blog2;
   }
@@ -286,8 +287,14 @@
   }
 
   .hygraph-html {
-    width: 28rem;
+    max-width: 25rem;
     padding-top: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
 
   /* Styling of filter options */
@@ -432,24 +439,31 @@
   }
 
   .main-post .content-field {
+    max-width: 27rem;
     padding: 1.5rem;
   }
 
-  .main-post span {
+  .main-post span,
+  .main-post2 span,
+  .main-post3 span {
     color: #2b3f5a;
     font-weight: 600;
     font-size: 0.9rem;
   }
 
-  .main-post h3 {
+  .main-post h3,
+  .main-post2 h3,
+  .main-post3 h3 {
     color: #7faec5;
     margin-bottom: 0.5rem;
   }
 
-  .main-post2 img {
+  .main-post2 img,
+  .main-post3 img {
     width: 100%;
     height: 10rem;
     object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
   }
 
   .main-post2,
@@ -466,7 +480,6 @@
   .read-more-container {
     position: relative;
     height: 100%;
-    right: 1.5rem;
   }
 
   .read-more-link {
