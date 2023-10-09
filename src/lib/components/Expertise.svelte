@@ -1,31 +1,35 @@
 <script>
 </script>
 
+<!-- Sectie voor Expertise -->
 <section
   class="expertise section"
 >
+  <!-- Header voor de Expertise sectie -->
   <h2
-    class="expertise-title"
+    class="expertise-header"
   >
     Expertise
   </h2>
 
+  <!-- Eerste Expertise-container -->
   <div
-    class="expertise__wrapper"
+    class="expertise-container"
   >
-    <!-- Expertise Kaart 1: Klimaatadaptatie -->
+    <!-- Expertise-info voor Klimaatadaptatie -->
     <div
-      class="expertise__card"
+      class="expertise-info"
     >
-      <img
-        class="expertise3"
-        src="assets/Untitled4.png"
-        alt="Illustratie klimaatadaptatie"
-      />
-      <h3>
+      <!-- Titel voor Klimaatadaptatie -->
+      <p
+        class="expertise-title"
+      >
         Klimaatadaptatie
-      </h3>
-      <p>
+      </p>
+      <!-- Omschrijving voor Klimaatadaptatie -->
+      <p
+        class="omschrijving"
+      >
         SPATwater
         helpt
         overheden en
@@ -41,10 +45,12 @@
         sociale
         kennis.
       </p>
+      <!-- Link naar meer informatie -->
       <a
         href="#klimaat"
         class="button"
       >
+        <!-- Tekst voor de link -->
         <p
           class="button_text2"
         >
@@ -52,20 +58,46 @@
         </p>
       </a>
     </div>
-
-    <!-- Expertise Kaart 2: Waterkwaliteit -->
+    <!-- Afbeelding voor Klimaatadaptatie -->
     <div
-      class="expertise__card"
+      class="right"
     >
       <img
-        class="expertise2"
-        src="assets/Untitled3.png"
+        class="expertise-img"
+        src="assets/Untitled4.png"
+        style="width: 350px; height: 200px;"
         alt="Illustratie waterkwaliteit"
       />
-      <h3>
+    </div>
+  </div>
+
+  <!-- Tweede Expertise-container -->
+  <div
+    class="expertise-container"
+  >
+    <!-- Afbeelding voor Waterkwaliteit -->
+    <div>
+      <img
+        class="expertise-img"
+        src="assets/Untitled3.png"
+        style="width: 350px; height: 200px;"
+        alt="Illustratie Klimaat"
+      />
+    </div>
+    <!-- Expertise-info voor Waterkwaliteit -->
+    <div
+      class="expertise-info left"
+    >
+      <!-- Titel voor Waterkwaliteit -->
+      <p
+        class="expertise-title"
+      >
         Waterkwaliteit
-      </h3>
-      <p>
+      </p>
+      <!-- Omschrijving voor Waterkwaliteit -->
+      <p
+        class="omschrijving"
+      >
         SPATwater
         biedt hulp
         aan
@@ -79,10 +111,12 @@
         specifieke
         situatie.
       </p>
+      <!-- Link naar meer informatie -->
       <a
         href="#waterkwaliteit"
         class="button"
       >
+        <!-- Tekst voor de link -->
         <p
           class="button_text2"
         >
@@ -90,20 +124,26 @@
         </p>
       </a>
     </div>
+  </div>
 
-    <!-- Expertise Kaart 3: B-RAIN -->
+  <!-- Derde Expertise-container -->
+  <div
+    class="expertise-container"
+  >
+    <!-- Expertise-info voor B-RAIN -->
     <div
-      class="expertise__card"
+      class="expertise-info right"
     >
-      <img
-        class="expertise2"
-        src="assets/brainlogo.png"
-        alt="Illustratie B-RAIN"
-      />
-      <h3>
+      <!-- Titel voor B-RAIN -->
+      <p
+        class="expertise-title"
+      >
         B-RAIN
-      </h3>
-      <p>
+      </p>
+      <!-- Omschrijving voor B-RAIN -->
+      <p
+        class="omschrijving"
+      >
         B-rain wil
         bewoners
         positief
@@ -116,10 +156,12 @@
         houden van
         hun tuin.
       </p>
+      <!-- Link naar meer informatie -->
       <a
         href="#waterkwaliteit"
         class="button"
       >
+        <!-- Tekst voor de link -->
         <p
           class="button_text2"
         >
@@ -127,19 +169,23 @@
         </p>
       </a>
     </div>
+    <!-- Afbeelding voor B-RAIN -->
+    <div
+      class="right2"
+    >
+      <img
+        class="expertise-img"
+        src="assets/brainlogo.png"
+        style="width: 350px; height: 200px;"
+        alt="Illustratie B-RAIN"
+      />
+    </div>
   </div>
 </section>
 
-<!-- Stijlen voor de Expertise sectie -->
 <style>
-  .expertise {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .expertise-title {
+  /* Stijlen voor de Expertise sectie */
+  .expertise-section {
     padding: 4rem
       2.5rem;
     color: var(
@@ -147,106 +193,139 @@
     );
   }
 
-  .expertise h3 {
-    font-size: 1.3rem;
+  /* Globale stijlen voor afbeeldingen */
+  img {
+    max-width: 400px;
+    border-radius: 20px;
+  }
+
+  /* Stijlen voor de Expertise sectie container */
+  .expertise {
+    background: white;
+    padding: 30px
+      50px;
+    border-radius: 20px;
+    height: 100%;
+  }
+
+  /* Stijlen voor de Expertise container */
+  .expertise-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: left;
+  }
+
+  /* Stijlen voor afbeeldingen binnen de Expertise container */
+  .expertise-img {
+    max-width: 400px;
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Stijlen voor rechterzijde binnen de Expertise container */
+  .right {
+    margin-left: 1rem;
+  }
+
+  /* Stijlen voor rechterzijde binnen de Expertise container */
+  .right2 {
+    margin-right: 1rem;
+  }
+
+  /* Stijlen voor informatie binnen de Expertise container */
+  .expertise-info {
+    display: grid;
+    place-content: center;
+  }
+
+  /* Stijlen voor linkerzijde binnen de Expertise container */
+  .left {
+    margin-left: 3rem;
+  }
+
+  /* Stijlen voor de Expertise header */
+  .expertise-header {
     color: var(
       --spat
     );
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 1em;
+    font-size: 2rem;
   }
 
-  .expertise__wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 2rem;
-    padding-top: 2em;
-    padding-bottom: 4em;
-  }
-
-  .expertise__card {
-    margin: 0 auto;
-    height: 30em;
-    width: 18em;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0
-      4px 6px
-      rgba(
-        174,
-        190,
-        205,
-        0.3
-      );
-    background-color: var(
-      --lg-bg
+  /* Stijlen voor de Expertise titel */
+  .expertise-title {
+    margin-top: 10px;
+    margin-bottom: 13px;
+    color: var(
+      --spat
     );
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  /* Stijlen voor de Expertise omschrijving */
+  .omschrijving {
+    max-width: 500px;
+    font-size: 0.8rem;
     color: var(
       --darkblue
     );
-    transition: 0.3s
-      ease-in;
+    margin-bottom: 0.5rem;
+    text-align: justify;
   }
 
-  .expertise__card
-    img {
-    width: 250px;
-    padding-bottom: 2em;
-  }
-
-  .expertise__card
-    .expertise2 {
-    width: 250px;
-    padding-bottom: 0.5em;
-  }
-
-  .expertise__card:nth-child(
-      2
-    ) {
+  /* Stijlen voor de knop */
+  .button {
+    display: inline-block;
     background-color: var(
-      --lg-bg
+      --green
     );
-  }
-
-  .expertise__card:nth-child(
-      3
-    ) {
-    background-color: var(
-      --lg-bg
+    color: white;
+    padding: 0.7rem
+      1rem;
+    border-radius: 5px;
+    font-weight: var(
+      --font-semi-bold
     );
+    transition: 0.3s;
+    text-decoration: none;
+    width: 120px;
+    margin-top: 10px;
+    font-size: 1rem;
   }
 
-  .expertise__card
-    button:hover {
-    cursor: pointer;
-  }
-  p {
-    padding-bottom: 1em;
+  /* Stijlen voor de knoptekst */
+  .button_text2 {
+    text-decoration: none;
   }
 
-  .expertise__card:hover {
-    transform: scale(
-      1.075
-    );
-    transition: 0.3s
-      ease-in;
-    cursor: pointer;
-  }
-
-  @media screen and (min-width: 568px) {
-    .expertise__wrapper {
+  /* Responsieve stijlen voor schermen kleiner dan 768px */
+  @media only screen and (max-width: 768px) {
+    /* Aanpassingen voor Expertise-container */
+    .expertise-container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2em
-        0 2em;
-      padding-top: 3em;
-      padding-bottom: 3em;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    /* Aanpassingen voor Expertise-info */
+    .expertise-info {
+      margin-bottom: 1rem;
+      order: 2;
+    }
+
+    /* Aanpassingen voor Expertise-afbeeldingen */
+    .expertise-img {
+      order: 1;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Aanpassingen voor rechter- en linkerzijde binnen de Expertise container */
+    .right,
+    .left {
+      margin-left: 0;
     }
   }
 </style>
