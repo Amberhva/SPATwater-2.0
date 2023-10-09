@@ -90,7 +90,8 @@
           <div class="content-field">
             <span class="category">{lastPost1.categorie}</span>
 
-            <span class="author">Door {lastPost1.author} op {lastPost1.date}</span
+            <span class="author"
+              >Door {lastPost1.author} op {lastPost1.date}</span
             >
 
             <h3>{lastPost1.title}</h3>
@@ -117,9 +118,11 @@
           <img src={lastPost2.image.url} alt="" />
 
           <div class="content-field">
-            <span class="category">{lastPost2.categorie}</span>
+            <span class="category2">{lastPost2.categorie}</span>
 
-            <span class="author">Door {lastPost2.author} op {lastPost2.date}</span>
+            <span class="author2"
+              >Door {lastPost2.author} op {lastPost2.date}</span
+            >
 
             <h3>{lastPost2.title}</h3>
 
@@ -130,7 +133,8 @@
 
           <div class="read-more-footer">
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{lastPost2.slug}">Verder lezen</a
+              <a class="read-more-link" href="/post/{lastPost2.slug}"
+                >Verder lezen</a
               >
             </div>
           </div>
@@ -144,9 +148,11 @@
           <img src={lastPost3.image.url} alt="" />
 
           <div class="content-field">
-            <span class="category">{lastPost3.categorie}</span>
+            <span class="category3">{lastPost3.categorie}</span>
 
-            <span class="author">Door {lastPost3.author} op {lastPost3.date}</span>
+            <span class="author3"
+              >Door {lastPost3.author} op {lastPost3.date}</span
+            >
 
             <h3>{lastPost3.title}</h3>
 
@@ -157,7 +163,8 @@
 
           <div class="read-more-footer">
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{lastPost3.slug}">Verder lezen</a
+              <a class="read-more-link" href="/post/{lastPost3.slug}"
+                >Verder lezen</a
               >
             </div>
           </div>
@@ -256,18 +263,15 @@
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
     border-radius: 0.5rem;
     cursor: pointer;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-    display: flex;
     grid-area: blog2;
   }
 
   .blog3 {
-    height: 20rem;
+    height: 22rem;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
     border-radius: 0.5rem;
     cursor: pointer;
-    display: flex;
     grid-area: blog3;
   }
 
@@ -294,8 +298,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* number of lines to show */
-    line-clamp: 5;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    line-clamp: 4;
     -webkit-box-orient: vertical;
   }
 
@@ -445,9 +449,7 @@
     padding: 1.5rem;
   }
 
-  .main-post span,
-  .main-post2 span,
-  .main-post3 span {
+  .main-post span {
     color: #2b3f5a;
     font-weight: 600;
     font-size: 0.9rem;
@@ -471,12 +473,6 @@
   .main-post2,
   .main-post3 {
     overflow: hidden;
-  }
-
-  .main-post3 img {
-    width: 100%;
-    height: 10rem;
-    object-fit: cover;
   }
 
   .read-more-container {
