@@ -20,7 +20,7 @@
       <p
         class="klimaat-omschrijving"
       >
-        <strong>
+        <b>
           Als meer
           dan 60%
           van een
@@ -33,7 +33,7 @@
           grond
           klimaatadaptief
           te maken.
-        </strong>
+        </b>
       </p>
       <p
         class="omschrijving"
@@ -120,7 +120,7 @@
       <img
         class="klimaat-img"
         src="assets/projects1.png"
-        style="width: 450px; height: 230px;"
+        style="width: 500px; height: 300px;"
         alt="klimaat"
       />
     </div>
@@ -131,6 +131,16 @@
     class="klimaat-container"
   >
     <div
+      class="right"
+    >
+      <img
+        class="klimaat-img"
+        src="assets/projects4.png"
+        style="width: 500px; height: 300px;"
+        alt="gemeenten"
+      />
+    </div>
+    <div
       class="klimaat-info left"
     >
       <p
@@ -138,6 +148,7 @@
       >
         Gemeenten
       </p>
+
       <p
         class="klimaat-omschrijving"
       >
@@ -195,16 +206,6 @@
         hitte- en
         droogtebestendig.
       </p>
-    </div>
-    <div
-      class="right"
-    >
-      <img
-        class="klimaat-img"
-        src="assets/projects4.png"
-        style="width: 450px; height: 230px;"
-        alt="gemeenten"
-      />
     </div>
   </div>
 
@@ -331,7 +332,7 @@
       <img
         class="klimaat-img"
         src="assets/verg.png"
-        style="width: 450px; height: 230px;"
+        style="width: 500px; height: 300px;"
         alt="bedrijven"
       />
     </div>
@@ -342,17 +343,18 @@
 <style>
   .klimaat-section {
     /* Stijlen voor de hele sectie */
-    padding: 4rem
-      2.5rem;
+    padding: 3rem
+      4rem;
     color: var(
       --spat
     );
     background: var(
       --lg-bg
     );
-    border-radius: 20px;
   }
-
+  img {
+    max-width: 500px;
+  }
   .klimaat-container {
     /* Stijlen voor individuele container binnen de sectie */
     display: flex;
@@ -361,27 +363,33 @@
     align-items: left;
   }
 
-  .klimaat-info {
-    /* Stijlen voor de informatie in elke container */
-    flex: 1;
-  }
-
   .klimaat-img {
     /* Stijlen voor afbeeldingen in elke container */
     max-width: 500px;
+    max-width: 100%;
     height: auto;
+    margin-left: -20px;
   }
 
-  /* Stijlen voor linkerzijde binnen de Klimaat container */
-  .right .right2 {
+  /* Stijlen voor rechterzijde binnen de Expertise container */
+  .right {
     margin-left: 1rem;
   }
+  /* Stijlen voor rechterzijde binnen de Expertise container */
+  .right2 {
+    margin-right: 1rem;
+  }
 
-  /* Stijlen voor linkerzijde binnen de Klimaat container */
+  .klimaat-info {
+    /* Stijlen voor de informatie in elke container */
+    /* display: grid;
+    place-content: center;
+    flex: 1; */
+  }
+  /* Stijlen voor linkerzijde binnen de Expertise container */
   .left {
     margin-left: 3rem;
   }
-
   .klimaat-title {
     /* Stijlen voor de titel */
     margin-top: 10px;
@@ -389,7 +397,7 @@
     color: var(
       --spat
     );
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -399,7 +407,9 @@
       --darkblue
     );
     max-width: 500px;
-    text-align: justify;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: start;
   }
 
   .omschrijving {
@@ -410,7 +420,7 @@
       --darkblue
     );
     margin-bottom: 0.5rem;
-    text-align: justify;
+    text-align: start;
   }
 
   .arrow_section {
@@ -421,7 +431,7 @@
     font-size: 0.8rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    text-align: justify;
+    text-align: start;
   }
 
   svg {
@@ -429,20 +439,24 @@
     width: 21px;
     flex-shrink: 0;
     stroke-width: 1.5px;
+    text-align: start;
   }
 
   @media only screen and (max-width: 768px) {
     /* Responsieve stijlen voor kleinere schermen */
     .klimaat-container {
+      display: flex;
       flex-direction: column;
       text-align: center;
     }
 
     .klimaat-info {
       margin-bottom: 1rem;
+      order: 2;
     }
 
     .klimaat-img {
+      order: 1;
       max-width: 100%;
       height: auto;
     }
