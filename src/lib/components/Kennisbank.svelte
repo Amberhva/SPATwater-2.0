@@ -284,16 +284,16 @@
 
   .filter-container {
     gap: 1rem;
-    padding: 0rem 2.5rem;
+    padding: 0rem 2.7rem 0rem 2.5rem;
   }
 
   .hygraph-html {
-    max-width: 25rem;
+    max-width: 29rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* number of lines to show */
-    line-clamp: 4;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    line-clamp: 5;
     -webkit-box-orient: vertical;
   }
 
@@ -302,8 +302,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
-    line-clamp: 3;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     padding-left: 1.5rem;
   }
@@ -313,8 +313,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
-    line-clamp: 3;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     padding-left: 1.5rem;
   }
@@ -370,7 +370,7 @@
   }
 
   .searchbar {
-    width: 29rem;
+    width: 30.2rem;
     padding: 0.5rem 0.6rem;
     border-radius: 0.5rem;
     border: none;
@@ -423,7 +423,7 @@
 
   .author {
     position: absolute;
-    font-size: 0.7rem !important;
+    font-size: 0.6rem !important;
     padding-top: 0.2rem;
     right: 1.5rem;
   }
@@ -451,7 +451,7 @@
   .blog-list span {
     color: #2b3f5a;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-bottom: 0.5rem;
   }
 
@@ -478,7 +478,7 @@
   }
 
   .main-post .content-field {
-    max-width: 27rem;
+    max-width: 35rem;
     padding: 1.5rem;
   }
 
@@ -491,6 +491,7 @@
   .main-post h3 {
     color: #7faec5;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
   }
 
   .main-post2 h3,
@@ -521,35 +522,36 @@
   .read-more-container2,
   .read-more-container3 {
     height: 5rem;
-    margin-top: 1.8rem;
+    margin-top: 1.5rem;
     margin-left: 1.5rem;
   }
 
   .read-more-link {
     width: 6.5rem;
     bottom: 1rem;
-    padding: 0.4rem 0.6rem;
+    /* padding: 0.4rem 0.6rem; */
     cursor: pointer;
-    font-size: 1rem;
-    background-color: #4ecd5d;
-    color: #ffffff;
+    font-size: 0.9rem;
+    /* background-color: #4ecd5d; */
+    color: #4ecd5d;
     border-radius: 0.5rem;
   }
 
   .read-more-link2,
   .read-more-link3 {
-    background-color: #4ecd5d;
-    color: #ffffff;
+    /* background-color: #4ecd5d; */
+    color: #4ecd5d;
     border-radius: 0.5rem;
-    padding: 0.4rem 0.6rem;
+    /* padding: 0.4rem 0.6rem; */
     width: 6.5rem;
+    font-size: 0.9rem;
   }
 
   .read-more-small i {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    padding: 0.6rem 1.2rem;
+    right: 1.5rem;
+    bottom: 1rem;
+    /* padding: 0.6rem 1.2rem; */
     color: #73ca6a;
     transition: 0.2s;
   }
@@ -560,7 +562,6 @@
 
   #map {
     height: 85vh;
-
     pointer-events: none;
   }
 
