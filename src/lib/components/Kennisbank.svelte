@@ -296,7 +296,7 @@
   }
 
   .blog-list .blog-text {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     position: relative;
   }
 
@@ -304,6 +304,7 @@
     color: #2b3f5a;
     font-weight: 600;
     font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 
   .blog-list h3 {
