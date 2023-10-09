@@ -1,465 +1,455 @@
-<!-- Dit is een HTML-sectie voor expertisegebieden -->
-<section>
-  <!-- Dit is het gedeelte voor Klimaatadaptatie -->
+<script>
+</script>
+
+<!-- Klimaat section -->
+<section
+  class="klimaat-section"
+>
+  <!-- Eerste container -->
   <div
-    class="klimaat"
+    class="klimaat-container"
   >
     <div
-      class="content"
+      class="klimaat-info"
     >
-      <!-- Afbeelding voor Klimaatadaptatie -->
-      <img
-        src="assets/projects1.png"
-        alt="Pineapple"
-        style="width: 450px; height: 230px;"
-      />
-      <!-- Titel voor Klimaatadaptatie -->
-      <h2>
+      <p
+        class="klimaat-title"
+      >
         Klimaatadaptatie
-      </h2>
-      <div
-        class="span1"
+      </p>
+      <p
+        class="klimaat-omschrijving"
       >
-        <!-- Sterke tekst voor Klimaatadaptatie -->
-        <span
-          ><strong
-            >Als
-            meer dan
-            60% van
-            een
-            gemeente
-            private
-            grond
-            is… dan
-            is het
-            noodzakelijk
-            om deze
-            grond
-            klimaatadaptief
-            te
-            maken.</strong
-          ></span
-        >
-      </div>
-      <div
-        class="beschrijving1"
-      >
-        <!-- Beschrijving voor Klimaatadaptatie -->
-        <p>
-          Ons
-          vertrekpunt
-          is dat een
-          groot deel
+        <strong>
+          Als meer
+          dan 60%
           van een
           gemeente
-          bestaat
-          uit
           private
-          grond
-          (tuinen,
-          daken,
-          bedrijventerreinen)
-          en dat het
-          absoluut
+          grond is…
+          dan is het
           noodzakelijk
-          is dat
-          deze
-          private
-          ruimte
+          om deze
+          grond
           klimaatadaptief
-          ingericht
-          moet
-          worden.
-          Elk
-          perceel
-          vraagt om
-          maatwerk,
-          maar het
-          is
-          onmogelijk
-          om elke
-          tuin in te
-          gaan.
-        </p>
-        <p
-          class="arrow_section"
+          te maken.
+        </strong>
+      </p>
+      <p
+        class="omschrijving"
+      >
+        Ons
+        vertrekpunt
+        is dat een
+        groot deel
+        van een
+        gemeente
+        bestaat uit
+        private
+        grond
+        (tuinen,
+        daken,
+        bedrijventerreinen)
+        en dat het
+        absoluut
+        noodzakelijk
+        is dat deze
+        private
+        ruimte
+        klimaatadaptief
+        ingericht
+        moet worden.
+        Elk perceel
+        vraagt om
+        maatwerk,
+        maar het is
+        onmogelijk
+        om elke tuin
+        in te gaan.
+      </p>
+      <p
+        class="arrow_section"
+      >
+        <!-- Pijlen en vragen -->
+        <br /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
         >
-          <!-- Pijlen en vragen -->
-          <br /><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-          >
-            <path
-              d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
-              fill="black"
-            />
-          </svg>
-          Hoe los je
-          dit probleem
-          op?
-          <br /><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-          >
-            <path
-              d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
-              fill="black"
-            />
-          </svg>
-          Hoe zet je
-          subsidiestromen
-          efficiënt in?
-          <br /><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-          >
-            <path
-              d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
-              fill="black"
-            />
-          </svg>
-          Hoe activeer
-          je bewoners?
-        </p>
-      </div>
+          <path
+            d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
+            fill="black"
+          />
+        </svg>
+        Hoe los je dit
+        probleem op?
+        <br /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
+        >
+          <path
+            d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
+            fill="black"
+          />
+        </svg>
+        Hoe zet je subsidiestromen
+        efficiënt in?
+        <br /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
+        >
+          <path
+            d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
+            fill="black"
+          />
+        </svg> Hoe activeer
+        je bewoners?
+      </p>
+    </div>
+    <div
+      class="right"
+    >
+      <img
+        class="klimaat-img"
+        src="assets/projects1.png"
+        style="width: 450px; height: 230px;"
+        alt="klimaat"
+      />
     </div>
   </div>
 
-  <!-- Dit is het gedeelte voor Gemeenten -->
+  <!-- Tweede container -->
   <div
-    class="gemeenten"
+    class="klimaat-container"
   >
     <div
-      class="content"
+      class="klimaat-info left"
     >
-      <!-- Afbeelding voor Gemeenten -->
-      <img
-        src="assets/projects4.png"
-        alt="Pineapple"
-        class="img2"
-        style="width: 450px; height: 230px;"
-      />
-
-      <!-- Titel voor Gemeenten -->
-      <h3>
+      <p
+        class="klimaat-title"
+      >
         Gemeenten
-      </h3>
-      <div
-        class="span2"
+      </p>
+      <p
+        class="klimaat-omschrijving"
       >
-        <!-- Sterke tekst voor Gemeenten -->
-        <span
-          ><strong
-            >Wij
-            kunnen
-            elke
-            bewoner
-            in uw
-            gemeente
-            een
-            persoonlijk
-            klimaatadaptief
-            advies
-            geven
-            zonder
-            elke
-            tuin in
-            te gaan.</strong
-          ></span
-        >
-      </div>
-      <div
-        class="beschrijving2"
-      >
-        <!-- Beschrijving voor Gemeenten -->
-        <p>
-          Wij
-          gebruiken
-          ruimtelijke
-          data en
-          sociale
-          kennis uit
-          de buurt
-          om de
+        <strong>
+          Wij kunnen
+          elke
+          bewoner in
+          uw
           gemeente
-          gedetailleerd
-          in kaart
-          te
-          brengen.
-          In
-          combinatie
-          met
-          veldwerk
-          kunnen wij
-          op
-          postcode,
-          buurt of
-          wijkniveau
-          klimaatadaptieve
-          maatregelen
-          personaliseren
-          en
-          prioriteren
-          in de
-          private
-          ruimte.
-          Hiermee
-          maken wij
-          de private
-          ruimte
-          waterrobuust,
-          waterveilig,
-          hitte- en
-          droogtebestendig.
-        </p>
-      </div>
+          een
+          persoonlijk
+          klimaatadaptief
+          advies
+          geven
+          zonder
+          elke tuin
+          in te
+          gaan.
+        </strong>
+      </p>
+      <p
+        class="omschrijving"
+      >
+        Wij
+        gebruiken
+        ruimtelijke
+        data en
+        sociale
+        kennis uit
+        de buurt om
+        de gemeente
+        gedetailleerd
+        in kaart te
+        brengen. In
+        combinatie
+        met veldwerk
+        kunnen wij
+        op postcode,
+        buurt of
+        wijkniveau
+        klimaatadaptieve
+        maatregelen
+        personaliseren
+        en
+        prioriteren
+        in de
+        private
+        ruimte.
+        Hiermee
+        maken wij de
+        private
+        ruimte
+        waterrobuust,
+        waterveilig,
+        hitte- en
+        droogtebestendig.
+      </p>
+    </div>
+    <div
+      class="right"
+    >
+      <img
+        class="klimaat-img"
+        src="assets/projects4.png"
+        style="width: 450px; height: 230px;"
+        alt="gemeenten"
+      />
     </div>
   </div>
 
-  <!-- Dit is het gedeelte voor Bedrijventerreinen -->
+  <!-- Derde container -->
   <div
-    class="bedrijven"
+    class="klimaat-container"
   >
     <div
-      class="content"
+      class="klimaat-info right"
     >
-      <!-- Afbeelding voor Bedrijventerreinen -->
-      <img
-        src="assets/verg.png"
-        alt="Pineapple"
-        style="width: 450px; height: 230px;"
-      />
-      <!-- Titel voor Bedrijventerreinen -->
-      <h4>
+      <p
+        class="klimaat-title"
+      >
         Bedrijventerreinen
-      </h4>
-      <div
-        class="span3"
+      </p>
+      <p
+        class="klimaat-omschrijving"
       >
-        <!-- Sterke tekst voor Bedrijventerreinen -->
-        <span
-          ><strong
-            >Bedrijventerreinen
-            zijn
-            vaak
-            versteend,
-            privaat
-            terrein
-            met veel
-            oppervlakte.</strong
-          ></span
-        >
-      </div>
-      <div
-        class="beschrijving3"
+        <strong>
+          Bedrijventerreinen
+          zijn vaak
+          versteend,
+          privaat
+          terrein
+          met veel
+          oppervlakte.
+        </strong>
+      </p>
+      <p
+        class="omschrijving"
       >
-        <!-- Beschrijving voor Bedrijventerreinen -->
-        <p>
-          SPATwater
-          richt zich
-          op het
-          activeren
-          van
-          werknemers
-          en
-          bedrijven
-          door vraag
-          en aanbod
-          op het
-          gebied van
-          water bij
-          elkaar te
-          brengen
-          door
-          middel van
-          ruimtelijke
-          data en
-          geeft
-          handvatten
-          om
-          bedrijventerreinen
-          te
-          vergroenen.
-        </p>
-        <p
-          class="arrow_section"
+        SPATwater
+        richt zich
+        op het
+        activeren
+        van
+        werknemers
+        en bedrijven
+        door vraag
+        en aanbod op
+        het gebied
+        van water
+        bij elkaar
+        te brengen
+        door middel
+        van
+        ruimtelijke
+        data en
+        geeft
+        handvatten
+        om
+        bedrijventerreinen
+        te
+        vergroenen.
+      </p>
+      <p
+        class="arrow_section"
+      >
+        <!-- Pijlen en vragen -->
+        <br /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
         >
-          <!-- Pijlen en vragen -->
-          <br /><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-          >
-            <path
-              d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
-              fill="black"
-            />
-          </svg>
-          Het uitvoeren
-          van stakeholders/netwerk
-          analyses
-          <br /><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-          >
-            <path
-              d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
-              fill="black"
-            />
-          </svg>
-          Co-creatie
-          sessie organiseren
-          <br /><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-          >
-            <path
-              d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
-              fill="black"
-            />
-          </svg>
-          Het uitvoeren
-          van restwaterscans
-          <br /><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-          >
-            <path
-              d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
-              fill="black"
-            />
-          </svg> Het
-          uitvoeren van
-          klimaatanalyses
-          en het koppelen
-          van relevante
-          maatregelen
-        </p>
-      </div>
+          <path
+            d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
+            fill="black"
+          />
+        </svg>
+        Het uitvoeren
+        van stakeholders/netwerk
+        analyses
+        <br /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
+        >
+          <path
+            d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
+            fill="black"
+          />
+        </svg>
+        Co-creatie sessie
+        organiseren
+        <br /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
+        >
+          <path
+            d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
+            fill="black"
+          />
+        </svg>
+        Het uitvoeren
+        van restwaterscans
+        <br /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
+        >
+          <path
+            d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z"
+            fill="black"
+          />
+        </svg> Het uitvoeren
+        van klimaatanalyses
+        en het koppelen
+        van relevante
+        maatregelen
+      </p>
+    </div>
+    <div
+      class="right"
+    >
+      <img
+        class="klimaat-img"
+        src="assets/verg.png"
+        style="width: 450px; height: 230px;"
+        alt="bedrijven"
+      />
     </div>
   </div>
 </section>
 
-<!-- Stijlen voor de sectie -->
+<!-- Stijlen voor de klimaat sectie -->
 <style>
-  section {
-    height: fit-content;
-    padding: 5rem
+  .klimaat-section {
+    /* Stijlen voor de hele sectie */
+    padding: 4rem
       2.5rem;
+    color: var(
+      --spat
+    );
     background: var(
       --lg-bg
     );
+    border-radius: 20px;
   }
-  h2 {
+
+  .klimaat-container {
+    /* Stijlen voor individuele container binnen de sectie */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: left;
+  }
+
+  .klimaat-info {
+    /* Stijlen voor de informatie in elke container */
+    flex: 1;
+  }
+
+  .klimaat-img {
+    /* Stijlen voor afbeeldingen in elke container */
+    max-width: 500px;
+    height: auto;
+  }
+
+  /* Stijlen voor linkerzijde binnen de Klimaat container */
+  .right .right2 {
+    margin-left: 1rem;
+  }
+
+  /* Stijlen voor linkerzijde binnen de Klimaat container */
+  .left {
+    margin-left: 3rem;
+  }
+
+  .klimaat-title {
+    /* Stijlen voor de titel */
+    margin-top: 10px;
+    margin-bottom: 13px;
     color: var(
       --spat
     );
     font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-weight: bold;
   }
 
-  .span1 span {
+  .klimaat-omschrijving {
+    /* Stijlen voor de omschrijving met sterk lettertype */
     color: var(
       --darkblue
     );
-  }
-  .beschrijving1 p {
-    color: var(
-      --darkblue
-    );
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  img {
-    float: right;
-  }
-  .beschrijving2 p {
-    color: var(
-      --darkblue
-    );
-    font-size: 0.8rem;
-    margin-top: 1rem;
-  }
-  h3 {
-    color: var(
-      --spat
-    );
-    font-size: 1.4rem;
-    margin-top: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  .span2 span {
-    color: var(
-      --darkblue
-    );
-  }
-  .img2 {
-    float: left;
+    max-width: 500px;
+    text-align: justify;
   }
 
-  .beschrijving3 p {
+  .omschrijving {
+    /* Stijlen voor algemene omschrijvingen */
+    max-width: 500px;
+    font-size: 0.8rem;
     color: var(
       --darkblue
     );
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
   }
 
-  h4 {
-    color: var(
-      --spat
-    );
-    font-size: 1.4rem;
-    margin-top: 4.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .span3 span {
-    color: var(
-      --darkblue
-    );
-  }
-  .img3 {
-    float: right;
-  }
   .arrow_section {
+    /* Stijlen voor sectie met pijlen en vragen */
     color: var(
       --darkblue
     );
-    display: block;
     font-size: 0.8rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    text-align: justify;
   }
 
   svg {
+    /* Stijlen voor SVG-afbeeldingen */
     width: 21px;
     flex-shrink: 0;
     stroke-width: 1.5px;
   }
-  img {
-    max-width: 100%;
-    height: auto;
+
+  @media only screen and (max-width: 768px) {
+    /* Responsieve stijlen voor kleinere schermen */
+    .klimaat-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .klimaat-info {
+      margin-bottom: 1rem;
+    }
+
+    .klimaat-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .right,
+    .left {
+      margin-left: 0;
+    }
   }
 </style>
