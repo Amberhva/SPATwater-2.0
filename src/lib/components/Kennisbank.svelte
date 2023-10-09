@@ -126,12 +126,6 @@
 
                     <h3>{post.title}</h3>
 
-                    <p>
-                      De kaderrichtlijn Water KRW is een Europese richtlijn die
-                      regelt dat oppervlaktewateren en het grondwater van
-                      voldoende kwalitiet zijn.
-                    </p>
-
                     <a class="read-more-small" href="/post/{post.slug}"
                       >Artikel bekijken</a
                     >
@@ -268,7 +262,9 @@
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
     border-radius: 0.5rem;
     cursor: pointer;
+    display: flex;
     margin-bottom: 1rem;
+    height: 8rem;
     width: 99%;
   }
 
@@ -291,20 +287,12 @@
   }
 
   .blog-list img {
-    width: 100%;
-    height: 10rem;
-    aspect-ratio: 1;
+    width: 10rem;
+    height: auto;
     object-fit: cover;
     padding: 0;
     margin: 0;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-  }
-
-  .blog-list p {
-    color: #2b3f5a;
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.2rem;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
   }
 
   .blog-list .blog-text {
