@@ -110,11 +110,57 @@
     </div>
 
     <div class="blog2">
-      <h3>TEST</h3>
+      <article class="main-post2">
+        {#each data.kennisbanks as post}
+          <img src={post.image.url} alt="" />
+
+          <div class="content-field">
+            <span class="category">{post.categorie}</span>
+
+            <span class="author">Door {post.author} op {post.date}</span>
+
+            <h3>{post.title}</h3>
+
+            <div class="hygraph-html">
+              {@html post.content.html}
+            </div>
+          </div>
+
+          <div class="read-more-footer">
+            <div class="read-more-container">
+              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
+              >
+            </div>
+          </div>
+        {/each}
+      </article>
     </div>
 
     <div class="blog3">
-      <h3>TEST</h3>
+      <article class="main-post3">
+        {#each data.kennisbanks as post}
+          <img src={post.image.url} alt="" />
+
+          <div class="content-field">
+            <span class="category">{post.categorie}</span>
+
+            <span class="author">Door {post.author} op {post.date}</span>
+
+            <h3>{post.title}</h3>
+
+            <div class="hygraph-html">
+              {@html post.content.html}
+            </div>
+          </div>
+
+          <div class="read-more-footer">
+            <div class="read-more-container">
+              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
+              >
+            </div>
+          </div>
+        {/each}
+      </article>
     </div>
 
     <div class="bloglist">
@@ -164,7 +210,6 @@
   /* Styling main elements */
 
   h2 {
-    padding: 0rem;
     padding-top: 3rem;
     color: var(--spat);
   }
@@ -190,7 +235,7 @@
 
   .blog-view-container {
     display: grid;
-    padding: 0.7rem 2rem;
+    padding: 0.7rem 2.5rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1fr;
     gap: 2rem;
@@ -237,7 +282,7 @@
 
   .filter-container {
     gap: 1rem;
-    padding: 0rem 2rem;
+    padding: 0rem 2.5rem;
   }
 
   .hygraph-html {
@@ -399,6 +444,23 @@
   .main-post h3 {
     color: #7faec5;
     margin-bottom: 0.5rem;
+  }
+
+  .main-post2 img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  .main-post2,
+  .main-post3 {
+    overflow: hidden;
+  }
+
+  .main-post3 img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
   }
 
   .read-more-container {
