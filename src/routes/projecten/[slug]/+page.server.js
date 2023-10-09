@@ -19,6 +19,9 @@ export async function load({ params }) {
                 image {
                     url
                 }
+                content {
+                    html
+                }
                 publishedAt
                 slug
                 title

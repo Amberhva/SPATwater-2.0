@@ -88,27 +88,22 @@
 
   <div class="project-view-container">
     <article class="projects">
-
       <div class="set-max-height">
         <span class="anchor" id="projecten"></span>
         <div class="filter-row">
           <h2>Projecten</h2>
           <ul class="filter-item-list" id="filterList">
-
             <li class="active">Klimaatadaptatie</li>
             <li>Waterkwaliteit</li>
             <li>B-RAIN</li>
-
           </ul>
-  
           <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
         </div>
   
         <div class="project-list-container">
           <ul class="project-list">
-  
             {#each data.projectens as project }
-
+            
             <a href="/projecten/{project.slug}" target="_blank">
               <li id="{project.slug}">
                 <div class="horizontal-flex">
@@ -124,18 +119,15 @@
             </a>
 
             {/each}
-    
           </ul>
         </div>
       </div>
 
     </article>
     <article class="project-map">
-
       <div id="map">
         <div class="mobile-porject-list">
           <ul>
-
             {#each data.projectens as project }
 
               <a href="/projecten/{project.slug}" target="_blank">
@@ -151,14 +143,11 @@
               </a>
 
             {/each}
-            
           </ul>
         </div>
       </div>
-
     </article>
   </div>
-
 </section>
 
 <style>
