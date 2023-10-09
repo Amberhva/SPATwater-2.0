@@ -450,7 +450,7 @@
     }
 
     .blog-view-container {
-      display: flex;
+      display: block;
     }
 
     .blog2,
@@ -482,7 +482,7 @@
     .blog-list li {
       display: flex;
       flex-direction: column;
-      height: 18rem;
+      height: 23rem;
     }
 
     .blog-list img {
