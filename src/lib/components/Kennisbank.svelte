@@ -126,6 +126,13 @@
 
                     <h3>{post.title}</h3>
 
+                    <p class="intro-text">
+                      Het is tijd om Nederlanders bewust te maken van de
+                      hoeveelheid regenwater op- en rondom het huis. Onze
+                      oplossing is het grootschalig inzetten van
+                      micro-maatregelen.
+                    </p>
+
                     <a class="read-more-small" href="/post/{post.slug}">
                       <i class="fa fa-arrow-right" aria-hidden="true" /></a
                     >
@@ -157,6 +164,10 @@
   }
 
   .mobile-blog-header {
+    display: none;
+  }
+
+  .intro-text {
     display: none;
   }
 
@@ -411,6 +422,22 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-bottom: 1rem;
+    }
+
+    .blog-list li {
+      display: flex;
+      flex-direction: column;
+      height: 18rem;
+    }
+
+    .blog-list img {
+      width: 100%;
+      height: 8rem;
+      border-radius: 0.5rem 0.5rem 0rem 0rem;
+    }
+
+    .intro-text {
+      display: block;
     }
 
     .mobile-blog-header li {
