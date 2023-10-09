@@ -66,15 +66,15 @@
     }
 
     :global(video) { 
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
       width: 100%;
       border-radius: .5rem;
     }
 
     :global(blockquote) { 
       margin-top: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       width: 70%;
       margin-left: 15%;
       font-size: 1.4rem;
@@ -82,7 +82,7 @@
       text-align: center;
     }
 
-    :global(blockquote):before { 
+    /* :global(blockquote):before { 
       content: '"';
       font-size: 5rem;
       position: absolute;
@@ -98,7 +98,7 @@
       color: #4ECD5D;
       margin-left: .5rem;
       margin-top: 1rem;
-    }
+    } */
 
     span {
       color: #2B3F5A;
