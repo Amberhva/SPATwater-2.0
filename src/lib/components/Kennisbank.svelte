@@ -5,7 +5,9 @@
 
   // Get the last post from the array
 
-  let lastPost = data.kennisbanks[data.kennisbanks.length - 1];
+  let lastPost1 = data.kennisbanks[data.kennisbanks.length - 1];
+  let lastPost2 = data.kennisbanks[data.kennisbanks.length - 2];
+  let lastPost3 = data.kennisbanks[data.kennisbanks.length - 3];
 
   import { onMount } from "svelte";
 
@@ -83,24 +85,24 @@
     <div class="latest">
       <article class="main-post">
         {#if data.kennisbanks.length > 0}
-          <img src={lastPost.image.url} alt="" />
+          <img src={lastPost1.image.url} alt="" />
 
           <div class="content-field">
-            <span class="category">{lastPost.categorie}</span>
+            <span class="category">{lastPost1.categorie}</span>
 
-            <span class="author">Door {lastPost.author} op {lastPost.date}</span
+            <span class="author">Door {lastPost1.author} op {lastPost1.date}</span
             >
 
-            <h3>{lastPost.title}</h3>
+            <h3>{lastPost1.title}</h3>
 
             <div class="hygraph-html">
-              {@html lastPost.content.html}
+              {@html lastPost1.content.html}
             </div>
           </div>
 
           <div class="read-more-footer">
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{lastPost.slug}"
+              <a class="read-more-link" href="/post/{lastPost1.slug}"
                 >Verder lezen</a
               >
             </div>
@@ -111,55 +113,55 @@
 
     <div class="blog2">
       <article class="main-post2">
-        {#each data.kennisbanks as post}
-          <img src={post.image.url} alt="" />
+        {#if data.kennisbanks.length > 0}
+          <img src={lastPost2.image.url} alt="" />
 
           <div class="content-field">
-            <span class="category">{post.categorie}</span>
+            <span class="category">{lastPost2.categorie}</span>
 
-            <span class="author">Door {post.author} op {post.date}</span>
+            <span class="author">Door {lastPost2.author} op {lastPost2.date}</span>
 
-            <h3>{post.title}</h3>
+            <h3>{lastPost2.title}</h3>
 
             <div class="hygraph-html">
-              {@html post.content.html}
+              {@html lastPost2.content.html}
             </div>
           </div>
 
           <div class="read-more-footer">
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
+              <a class="read-more-link" href="/post/{lastPost2.slug}">Verder lezen</a
               >
             </div>
           </div>
-        {/each}
+        {/if}
       </article>
     </div>
 
     <div class="blog3">
       <article class="main-post3">
-        {#each data.kennisbanks as post}
-          <img src={post.image.url} alt="" />
+        {#if data.kennisbanks.length > 0}
+          <img src={lastPost3.image.url} alt="" />
 
           <div class="content-field">
-            <span class="category">{post.categorie}</span>
+            <span class="category">{lastPost3.categorie}</span>
 
-            <span class="author">Door {post.author} op {post.date}</span>
+            <span class="author">Door {lastPost3.author} op {lastPost3.date}</span>
 
-            <h3>{post.title}</h3>
+            <h3>{lastPost3.title}</h3>
 
             <div class="hygraph-html">
-              {@html post.content.html}
+              {@html lastPost3.content.html}
             </div>
           </div>
 
           <div class="read-more-footer">
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{post.slug}">Verder lezen</a
+              <a class="read-more-link" href="/post/{lastPost3.slug}">Verder lezen</a
               >
             </div>
           </div>
-        {/each}
+        {/if}
       </article>
     </div>
 
