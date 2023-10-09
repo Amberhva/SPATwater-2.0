@@ -400,15 +400,24 @@
       display: none;
     }
 
-    .mobile-blog-header {
-      display: block;
+    .filter-item-list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+    }
 
+    .mobile-blog-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       margin-bottom: 1rem;
     }
 
     .mobile-blog-header li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       margin-right: 0.1rem;
-
       font-size: 0.7rem;
     }
   }
