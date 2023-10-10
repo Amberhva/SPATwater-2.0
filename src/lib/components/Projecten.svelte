@@ -28,14 +28,47 @@
     // Loop through projecten
     data.projectens.forEach((project, index) => {
 
-      // // Create a marker for each project
-      // const marker = L.circle([project.plaats.latitude, project.plaats.longitude], {
-      //   color: '#73CA6A',
-      //   fillColor: '#73CA6A',
-      //   fillOpacity: 0.5,
-      //   radius: 1200,
-      //   shadow: true,
-      // }).addTo(map);
+      // Define a custom icon
+      var waterIcon = L.icon({
+        iconUrl: '/assets/water-svgrepo-com.png', // Path to your custom PNG marker image
+        iconSize: [32, 32], // Size of the icon
+        iconAnchor: [16, 32], // Anchor point of the icon (center bottom)
+      });
+
+      // Define a custom icon
+      var climateIcon = L.icon({
+        iconUrl: '/assets/cloud-svgrepo-com.png', // Path to your custom PNG marker image
+        iconSize: [32, 32], // Size of the icon
+        iconAnchor: [16, 32], // Anchor point of the icon (center bottom)
+      });
+
+      // Define a custom icon
+      var brainIcon = L.icon({
+        iconUrl: '/assets/bolt-svgrepo-com.png', // Path to your custom PNG marker image
+        iconSize: [32, 32], // Size of the icon
+        iconAnchor: [16, 32], // Anchor point of the icon (center bottom)
+      });
+
+      if(project.categorie == "Klimaatadaptatie") {
+        // Create a marker with the custom icon
+        var marker = L.marker([project.plaats.latitude, project.plaats.longitude], {
+          icon: waterIcon // Assign the custom icon to the marker
+        }).addTo(map);
+      }
+
+      if(project.categorie == "Waterkwaliteit") {
+        // Create a marker with the custom icon
+        var marker = L.marker([project.plaats.latitude, project.plaats.longitude], {
+          icon: climateIcon // Assign the custom icon to the marker
+        }).addTo(map);
+      }
+
+      if(project.categorie == "B-rain") {
+        // Create a marker with the custom icon
+        var marker = L.marker([project.plaats.latitude, project.plaats.longitude], {
+          icon: brainIcon // Assign the custom icon to the marker
+        }).addTo(map);
+      }
 
       // Add a hover event
       document.getElementById(project.slug).addEventListener('mouseover', function () {
