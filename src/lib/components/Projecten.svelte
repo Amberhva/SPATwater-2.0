@@ -28,14 +28,14 @@
     // Loop through projecten
     data.projectens.forEach((project, index) => {
 
-      // Create a marker for each project
-      const marker = L.circle([project.plaats.latitude, project.plaats.longitude], {
-        color: '#73CA6A',
-        fillColor: '#73CA6A',
-        fillOpacity: 0.5,
-        radius: 1200,
-        shadow: true,
-      }).addTo(map);
+      // // Create a marker for each project
+      // const marker = L.circle([project.plaats.latitude, project.plaats.longitude], {
+      //   color: '#73CA6A',
+      //   fillColor: '#73CA6A',
+      //   fillOpacity: 0.5,
+      //   radius: 1200,
+      //   shadow: true,
+      // }).addTo(map);
 
       // Add a hover event
       document.getElementById(project.slug).addEventListener('mouseover', function () {
