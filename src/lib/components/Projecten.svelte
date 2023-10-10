@@ -2,14 +2,6 @@
   export let data;
   // console.log(data)
 
-  // Filter options
-  let projectFilterOption = ""
-
-  function changeFilter(option) {
-    let projectFilterOption = option
-    console.log(projectFilterOption)
-  }
-
   import { onMount } from 'svelte';
 
   // Write client side JavaScript inside here
@@ -22,14 +14,8 @@
       minZoom: 10
     });
 
-    // Leaflet map theme
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
-
-    // Loop through projecten
-    data.projectens.forEach((project, index) => {
-
-      // Define a custom icon
-      var waterIcon = L.icon({
+    // Define a custom icon
+    var waterIcon = L.icon({
         iconUrl: '/assets/water-svgrepo-com.png', // Path to your custom PNG marker image
         iconSize: [32, 32], // Size of the icon
         iconAnchor: [16, 32], // Anchor point of the icon (center bottom)
@@ -48,6 +34,12 @@
         iconSize: [32, 32], // Size of the icon
         iconAnchor: [16, 32], // Anchor point of the icon (center bottom)
       });
+
+    // Leaflet map theme
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
+
+    // Loop through projecten
+    data.projectens.forEach((project, index) => {
 
       if(project.categorie == "Klimaatadaptatie") {
         // Create a marker with the custom icon
@@ -117,7 +109,7 @@
     <h2>Projecten</h2>
     <ul class="filter-item-list" id="filterList-mobile">
             
-      <li class="active" onclick="changeFilter(Klimaatadaptatie)">Klimaatadaptatie</li>
+      <li class="active">Klimaatadaptatie</li>
       <li>Waterkwaliteit</li>
       <li>B-RAIN</li>
 
@@ -144,21 +136,19 @@
         <div class="project-list-container">
           <ul class="project-list">
             {#each data.projectens as project }
-            
-            <a href="/projecten/{project.slug}">
-              <li id="{project.slug}">
-                <div class="horizontal-flex">
-                  <img src="{project.image.url}" alt="">
-                  <div class="project-text">
-                    <span>{project.categorie}</span>
-                    <h3>{project.title}</h3>
-                    <p>{project.intro}</p>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </li>
-            </a>
-
+                <a href="/projecten/{project.slug}">
+                  <li id="{project.slug}">
+                    <div class="horizontal-flex">
+                      <img src="{project.image.url}" alt="">
+                      <div class="project-text">
+                        <span>{project.categorie}</span>
+                        <h3>{project.title}</h3>
+                        <p>{project.intro}</p>
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </li>
+                </a>
             {/each}
           </ul>
         </div>
