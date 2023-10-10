@@ -1,38 +1,51 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# SPAT-Water💧
+## Inhoudsopgave
 
-## Creating a project
+  * [Beschrijving📃](#beschrijving)
+  * [Gebruik👥](#gebruik)
+  * [Kenmerken✅](#kenmerken)
+  * [Installatie⚙️](#installatie)
+  * [Bronnen🌐](#bronnen)
+  * [Licentie](#licentie)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Beschrijving 📃 -  Gebruik  👥
+<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+<!-- Voeg een mooie poster visual toe 📸 -->
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
+<!-- Voeg een link toe naar Github Pages 🌐-->
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```bash
-npm run dev
+## Kenmerken ✅
+<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
 
-## Building
+**TOOLS 🧰:**
+* VSCode
+* Miro
+* Figma
+**GEBRUIKTE TECHNIEKEN 🛠️:**
+* Svelte
+* Sveltekit
+* Hygragh
+* JS
+* CSS
+**COMMUNICATIE MIDDELEN 🗣️:**
+* Team Canvas
+* Microsoft Teams
+* Calls
 
-To create a production version of your app:
+## Installatie ⚙️
 
-```bash
-npm run build
-```
+1. Clone of download deze repository naar de gewenste folder.
+2. Open de root directory van dit project en open het project in een code editor naar keuze.
+3. Gebruik npm install om de benodigde packages te downloaden voor dit project.
+4. Voor het gebruik van Hygraph om data in te laden gebruik dan het commando npm graphql-request om requesten te fetchen.
+5. Start een server met npm run dev.
 
-You can preview the production build with `npm run preview`.
+## Bronnen 🌐
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Licentie
+This project is licensed under the terms of the MIT license.
