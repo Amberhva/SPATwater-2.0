@@ -26,6 +26,8 @@
             {@html data.project.content.html}
           </div>
 
+          <a href="/#projecten"><p><i class="fa fa-arrow-left" aria-hidden="true"></i> Terug naar de kaart</p></a>
+
           <!-- <h2>Gerelateerde projecten</h2> -->
 
         </div>
