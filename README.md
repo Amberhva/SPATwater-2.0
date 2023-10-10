@@ -8,8 +8,10 @@
   * [Installatie⚙️](#installatie)
   * [Bronnen🌐](#bronnen)
   * [Licentie](#licentie)
+    
+##  Gebruik  👥
 
-## Beschrijving 📃 -  Gebruik  👥
+## Beschrijving 📃
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
 <!-- Voeg een mooie poster visual toe 📸 -->
@@ -26,13 +28,17 @@
 * VSCode
 * Miro
 * Figma
+  
 **GEBRUIKTE TECHNIEKEN 🛠️:**
+
 * Svelte
 * Sveltekit
 * Hygragh
 * JS
 * CSS
+  
 **COMMUNICATIE MIDDELEN 🗣️:**
+
 * Team Canvas
 * Microsoft Teams
 * Calls
