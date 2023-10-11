@@ -2,159 +2,84 @@
 </script>
 
 <!--==================== ABOUT ====================-->
-<section class="about section">
-  <div class="about-container container grid">
-    <div class="about-text">
-      <h2 class="about-title">Over SPATwater</h2>
-      <div class="about-content">
-        <p>
-          SPATwater bestaat uit een nieuwe generatie enthousiaste hydrologen die
-          met een technische achtergrond nét wat anders kijken naar ruimtelijke
-          opgaven. De uitdagingen zijn enorm, maar de kansen die het biedt nog
-          groter.
-        </p>
-        <p>
-          Met expertise op het gebied van waterkwaliteit, de Kaderrichtlijn
-          Water en klimaatadaptatie helpt SPATwater overheden en bedrijven om
-          toekomstbestendig en waterrobuust te worden.
-        </p>
-        <p>
-          Wij voeren geen analyse uit zonder handelingsperspectief en bieden
-          zowel creatieve als praktische oplossingen.
-        </p>
-      </div>
-      <a href="#expertise" class="button">Onze expertise</a>
-    </div>
+<section class="climate-container">
+  <div class="inner-section">
+    <div class="horizontal-flex-row">
+      <div class="text-container">
+        <h2>Over SPATwater</h2>
+        <p>SPATwater bestaat uit een nieuwe generatie enthousiaste hydrologen die met een technische achtergrond nét wat anders kijken naar ruimtelijke opgaven. De uitdagingen zijn enorm, maar de kansen die het biedt nog groter.</p>
+        <p>Met expertise op het gebied van waterkwaliteit, de Kaderrichtlijn Water en klimaatadaptatie helpt SPATwater overheden en bedrijven om toekomstbestendig en waterrobuust te worden.</p>
+        <p>Wij voeren geen analyse uit zonder handelingsperspectief en bieden zowel creatieve als praktische oplossingen.</p>
 
-    <div class="about-image">
-      <img src="assets/tree.png" alt="boom illustratie" />
+        <a href="#expertise" class="button">Onze expertise</a>
+      </div>
+      <div class="image-container">
+        <img src="assets/tree.png" alt="boom illustratie" />
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .section {
-    height: 100vh;
-    padding: 5rem 2.5rem;
-    overflow: hidden;
+  section {
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
-  .about {
-    position: relative;
-    background-color: var(--lg-bg);
+  .inner-section {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3rem;
   }
 
-  .about-title {
+  h2 {
+    padding: 0rem;
     color: var(--spat);
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .about-content p {
-    color: var(--darkblue);
-    display: block;
-    font-size: 0.8rem;
     margin-bottom: 1rem;
-    z-index: 5;
   }
 
-  .about-text {
-    text-align: left;
+  .horizontal-flex-row {
+    width: 100%;
+    display: flex;
+    gap: 10%;
   }
 
-  .about-image {
-    display: inline-block;
-    margin-left: 100px;
-    margin-top: -2rem;
-    z-index: 3;
+  .text-container {
+    width: 50%;
   }
 
-  .about-image img {
-    width: 240px;
+  img {
+    height: 20rem;
+    object-fit: cover;
+    border-radius: .5rem;
   }
 
-  @media screen and (min-width: 454px) {
-    .about-image {
-      display: inline-block;
-      margin-left: 170px;
-      margin-top: -90px;
+  /* Mobiele weergaven */
+  @media only screen and (max-width: 1100px) {
+    .horizontal-flex-row {
+      flex-direction: column;
     }
 
-    .about-image img {
-      width: 230px;
-    }
-  }
-
-  @media screen and (min-width: 568px) {
-    .about-image {
-      display: inline-block;
-      margin-left: 200px;
-      margin-top: -90px;
+    .text-container {
+      width: 100%;
     }
 
-    .about-image img {
-      width: 300px;
+    .image-container {
+      width: 100%;
+      margin-top: 1rem;
     }
 
-    .about-text {
-      max-width: 44rem;
-      margin: 0 auto;
-    }
-  }
-
-  @media screen and (min-width: 720px) {
-    .about-image {
-      display: inline-block;
-      margin-left: 330px;
-      margin-top: -90px;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .about-image {
-      display: inline-block;
-      margin-left: 350px;
-      margin-top: -90px;
+    img {
+      height: 10rem;
+      width: 100%;
+      object-fit: cover;
     }
 
-    .about-image img {
-      width: 310px;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .section {
-      padding: 5rem 10rem;
-    }
-    .about-title {
-      font-size: 1.4rem;
+    .inner-section {
+      /* padding: 0rem 2.5rem; */
+      width: 70%;
       margin-bottom: 2rem;
-    }
-
-    .about-content {
-      margin-bottom: 2rem;
-    }
-
-    .about-content p {
-      font-size: 1rem;
-    }
-
-    .about-text {
-      padding: 6rem 3rem;
-    }
-    .about-image {
-      margin: 0 auto;
-    }
-
-    .about-image img {
-      width: 450px;
-    }
-
-    .about-container {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      align-items: center;
     }
   }
 </style>
