@@ -59,7 +59,6 @@
 
   img {
     height: 20rem;
-    width: 100%;
     object-fit: cover;
     border-radius: .5rem;
   }
