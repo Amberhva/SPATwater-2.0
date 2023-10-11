@@ -369,6 +369,7 @@
     max-width: 100%;
     height: auto;
     margin-left: -20px;
+    border-radius: 5px;
   }
 
   /* Stijlen voor rechterzijde binnen de Expertise container */
