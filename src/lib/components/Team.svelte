@@ -146,7 +146,7 @@
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding: 4rem 2rem;
     }
 
@@ -168,7 +168,6 @@
       display: grid;
       justify-content: center;
       gap: 2em;
-      padding-top: 5em;
       padding-bottom: 3em;
       margin: 0 auto;
       grid-template-columns: repeat(3, 1fr);
