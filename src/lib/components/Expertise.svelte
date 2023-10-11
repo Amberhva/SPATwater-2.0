@@ -114,8 +114,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    padding-top: 2em;
-    padding-bottom: 4em;
+    padding: 4rem;
   }
   .expertise__card {
     margin: 0 auto;

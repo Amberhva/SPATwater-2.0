@@ -35,8 +35,8 @@ export async function load() {
       }
       slug
     }
-    partner {
-      image {
+    partner(first: 12) {
+      image{
         url
       }
       link
