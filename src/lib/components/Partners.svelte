@@ -10,18 +10,8 @@
     class="sponsor__container container grid"
   >
     {#each data.partner as partner}
-      <a
-        href={partner.link}
-        ><img
-          width="100"
-          height="100"
-          src={partner
-            .image
-            .url}
-          alt="Partners Logo's"
-          class="sponsor__img"
-        /></a
-      >
+      <a href={partner.link}>
+        <img src={partner.image.url} alt="logo's partners" class="sponsor-img"/></a>
     {/each}
   </div>
 </section>
@@ -53,9 +43,9 @@
     );
   }
 
-  .sponsor__img {
-    width: 100px;
-    height: fit-content;
+  .sponsor-img {
+    width: 90px;
+    height: auto;
     opacity: 0.5;
     filter: invert(
       0.7
