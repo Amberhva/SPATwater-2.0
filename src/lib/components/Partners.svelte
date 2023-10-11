@@ -7,7 +7,7 @@
   class="sponsor section"
 >
   <div
-    class="sponsor__container"
+    class="sponsor__container container grid"
   >
     {#each data.partner as partner}
       <a
@@ -18,8 +18,8 @@
           src={partner
             .image
             .url}
-          alt=""
-          class="sponsor-img"
+          alt="Partners Logo's"
+          class="sponsor__img"
         /></a
       >
     {/each}
@@ -28,11 +28,9 @@
 
 <style>
   .sponsor {
-    height: 100vh;
-    background: white;
     position: relative;
-    padding: 8rem 0
-      4rem;
+    padding: 6rem
+      3.5rem;
   }
 
   .sponsor__container {
@@ -46,23 +44,25 @@
     );
     justify-items: center;
     row-gap: 3.5rem;
+    align-items: center;
   }
 
-  .sponsor__content:hover
-    .sponsor-img {
+  .sponsor__img {
     filter: invert(
       0.5
     );
   }
 
-  .sponsor-img {
+  .sponsor__img {
     width: 100px;
-    height: 90px;
+    height: fit-content;
     opacity: 0.5;
     filter: invert(
       0.7
     );
+    transition: 0.3s;
   }
+
   /* Responsive */
   @media screen and (min-width: 720px) {
     .sponsor__container {
@@ -75,14 +75,12 @@
     }
 
     .sponsor-img {
-      width: 90px;
+      width: 80px;
       opacity: 0.5;
       filter: invert(
         0.7
       );
-      transition: var(
-        --img-transition
-      );
+      transition: 0.3s;
     }
   }
   @media screen and (min-width: 768px) {
