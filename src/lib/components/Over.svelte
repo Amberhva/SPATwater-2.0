@@ -23,8 +23,10 @@
 <style>
   section {
     width: 100%;
-    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     margin-bottom: 5rem;
+    background: var(--lg-bg);
   }
 
   .inner-section {
