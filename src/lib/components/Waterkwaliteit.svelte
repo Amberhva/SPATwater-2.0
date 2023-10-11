@@ -1,114 +1,105 @@
 <script>
 </script>
 
-<section>
-  <h2>Waterkwaliteit</h2>
-  <span><strong>Wat betekent de Kaderrichtlijn Water voor jou?</strong></span>
-
 <main>
-<article>
-<p class="waterkwaliteit_description">De Kaderrichtlijn Water (KRW) is een Europese richtlijn die regelt dat oppervlaktewateren en het grondwater van voldoende kwaliteit zijn. Toch voldoen pas enkele wateren aan deze norm. We staan nu op een keerpunt. Binnen 5 jaar, in 2027, moeten alle oppervlaktewateren en ons grondwater voldoen aan de KRW. Vergelijkingen met de stikstofcrisis zijn snel gemaakt, maar de KRW biedt ook kansen in proposities, aanbestedingen en vergunningverlening.
-SPATwater biedt hulp aan organisaties bij het identificeren van de implicaties van de KRW voor hun specifieke situatie. Dit doen wij onder andere door middel van:
-</p>
-
-<p class="arrow_section">
-  <br><svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="none">
-    <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z" fill="black"/>
-  </svg> <strong>Het verzorgen van kennissessies</strong>
-
-  <br><svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="none">
-    <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z" fill="black"/>
-  </svg> <strong>Analyse van huidige KRW-risico’s en kansen</strong>
-
-  <br><svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="none">
-    <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989593 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75H21V5.25H0V6.75Z" fill="black"/>
-  </svg> <strong>Propositieverbetering</strong>
-</article>
-
-<article>
-<img src="assets/Aquathermie.png" alt="foto aquathermie" class="img_aquathermie">
-</article>
+    <section class="first-section">
+        <div class="inner-section">
+          <div class="horizontal-flex-row">
+            <div class="image-container">
+                <h2>Waterkwaliteit</h2>
+                <p class="bold-text">Wat betekent de Kaderrichtlijn Water voor jou?</p>
+                <img src="assets/Aquathermie.png" alt="foto aquathermie">
+            </div>
+            <div class="text-container">
+                <p>De Kaderrichtlijn Water (KRW) is een Europese richtlijn die regelt dat oppervlaktewateren en het grondwater van voldoende kwaliteit zijn. Toch voldoen pas enkele wateren aan deze norm. We staan nu op een keerpunt. Binnen 5 jaar, in 2027, moeten alle oppervlaktewateren en ons grondwater voldoen aan de KRW. Vergelijkingen met de stikstofcrisis zijn snel gemaakt, maar de KRW biedt ook kansen in proposities, aanbestedingen en vergunningverlening.</p>
+                <p>SPATwater biedt hulp aan organisaties bij het identificeren van de implicaties van de KRW voor hun specifieke situatie. Dit doen wij onder andere door middel van:</p>
+                <ul>
+                  <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Het verzorgen van kennissessies</li>
+                  <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Analyse van huidige KRW-risico’s en kansen</li>
+                  <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Propositieverbetering</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+    </section>
 </main>
-</section>
 
 <style>
-
-h2 {
-    color: var(--spat);
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-
 section {
-    height: 100vh;
-    padding: 6rem 5.5rem;
-    overflow: hidden;
-}
-
-@media screen and (min-width: 650px){
-section{
-    height: 90vh;
-}
-}
-
-@media screen and (min-width: 700px){
-section{
-    height: 80vh;
-}
-}
-
-@media screen and (min-width: 750px){
-section{
-    height: 100vh;
-}
-}
-
-@media screen and (min-width: 650px){
-main{
-    display:flex;
-    gap: 2em;
-    flex-direction: row-reverse;
-    margin-top: 3em;
-}
-}
-
-article:first-child{
     width: 100%;
-}
+  }
 
-@media screen and (min-width: 650px){
-article:first-child{
-    width: 60%;
-}
-}
+  .first-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
 
-span{
-    color: var(--darkblue);
-}
+  .inner-section {
+    /* padding: 0rem 2.5rem; */
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3rem;
+  }
 
-p.waterkwaliteit_description, .arrow_section{
-    color: var(--darkblue);
-    display: block;
-    font-size: 0.8rem;
+  h2 {
+    padding: 0rem;
+    color: var(--spat);
     margin-bottom: 1rem;
-}
+  }
 
-svg{
-    width: 21px;
-    flex-shrink: 0;
-    stroke-width: 1.5px;
-}
+  .bold-text {
+    font-weight: 600;
+  }
 
-.img_aquathermie{
-    transition: 0.3s;
+  ul {
+    list-style: none;
+    font-size: .8rem;
+    color: var(--darkblue);
+  }
+
+  .horizontal-flex-row {
     width: 100%;
-}
-
-@media screen and (min-width: 650px){
-.img_aquathermie{
     display: flex;
-    flex-grow: 4;
-}
-}
+    gap: 10%;
+  }
 
+  .text-container {
+    width: 50%;
+    margin-top: 8rem;
+  }
+
+  img {
+    height: 20rem;
+    object-fit: cover;
+    border-radius: .5rem;
+  }
+
+  /* Mobiele weergaven */
+  @media only screen and (max-width: 1100px) {
+    .horizontal-flex-row {
+      flex-direction: column;
+    }
+
+    .text-container {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .image-container {
+      width: 100%;
+      margin-top: 0rem;
+    }
+
+    img {
+      height: 10rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .inner-section {
+      /* padding: 0rem 2.5rem; */
+      width: 70%;
+      margin-bottom: 2rem;
+    }
+  }
 </style>
