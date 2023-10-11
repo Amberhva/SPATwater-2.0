@@ -154,28 +154,29 @@
       </div>
 
     </article>
+    <div class="mobile-porject-list">
+      <ul>
+        <!-- Loop voor de mobile versie -->
+        {#each data.projectens as project }
+          <a href="/projecten/{project.slug}">
+            <li id="{project.slug}-mobile">
+              <div class="horizontal-flex">
+                <img src="{project.image.url}" alt="">
+                <div class="project-text">
+                  <span>{project.categorie}</span>
+                  <h3>{project.title}</h3>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+              </div>
+            </li>
+          </a>
+        {/each}
+      </ul>
+    </div>
     <article class="project-map">
-      <div id="map">
-        <div class="mobile-porject-list">
-          <ul>
-            <!-- Loop voor de mobile versie -->
-            {#each data.projectens as project }
-              <a href="/projecten/{project.slug}">
-                <li id="{project.slug}-mobile">
-                  <div class="horizontal-flex">
-                    <img src="{project.image.url}" alt="">
-                    <div class="project-text">
-                      <span>{project.categorie}</span>
-                      <h3>{project.title}</h3>
-                    </div>
-                  </div>
-                </li>
-              </a>
-            {/each}
-          </ul>
-        </div>
-      </div>
+      <div id="map"></div>
     </article>
+    
   </div>
 </section>
 
@@ -355,7 +356,7 @@
   /* Mobiele weergaven */
   @media only screen and (max-width: 1100px) {
     section {
-      height: 80vh;
+      height: 95vh;
     }
 
     #map {
@@ -377,13 +378,9 @@
 
     /* Styling mobile view of projects inside map */
     .mobile-porject-list {
-      display: block;
-      position: absolute;
-      z-index: 1000;
-      bottom: 0;
-      height: 18vh;
+      height: 16vh;
       width: 100%;
-      padding: .5rem;
+      display: block;
     }
 
     .mobile-porject-list ul {
@@ -402,15 +399,16 @@
     }
 
     .mobile-porject-list li {
-      width: 20rem;
+      width: 16rem;
       background: var(--lg-bg);
       box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
       border-radius: .5rem;
       margin-bottom: .5rem;
+      position: relative;
     }
 
     .mobile-porject-list img {
-      width: 8rem;
+      width: 4rem;
       height: 6rem;
       object-fit: cover;
       border-radius: .5rem 0rem 0rem .5rem;
@@ -455,6 +453,14 @@
       -webkit-user-select: none; /* Safari */
       -ms-user-select: none; /* IE 10 and IE 11 */
       user-select: none; /* Standard syntax */
+    }
+
+    i {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: .6rem 1.2rem;
+      color: #73CA6A;
     }
 }
 </style>

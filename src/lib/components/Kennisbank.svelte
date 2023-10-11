@@ -227,6 +227,10 @@
       "blog2 blog3 bloglist";
   }
 
+  .blog-view-container img {
+    margin: 0;
+  }
+
   .latest {
     grid-area: latest;
   }
