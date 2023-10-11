@@ -59,6 +59,7 @@
 
   svg {
     width: 1.7rem;
+    margin-top: 0.5rem;
     margin-left: -0.3em;
   }
 
