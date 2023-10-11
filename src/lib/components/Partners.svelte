@@ -7,24 +7,22 @@
   class="sponsor section"
 >
   <div
-    class="sponsor__container container grid"
+    class="sponsor__container"
   >
     {#each data.partner as partner}
       <a
         href={partner.link}
         ><img
-          width="200"
+          width="100"
           height="100"
           src={partner
             .image
             .url}
           alt=""
+          class="sponsor-img"
         /></a
       >
     {/each}
-    <div
-      class="sponsor__content"
-    />
   </div>
 </section>
 
@@ -33,9 +31,12 @@
     height: 100vh;
     background: white;
     position: relative;
+    padding: 8rem 0
+      4rem;
   }
 
   .sponsor__container {
+    display: grid;
     grid-template-columns: repeat(
       auto-fit,
       minmax(
@@ -48,20 +49,18 @@
   }
 
   .sponsor__content:hover
-    .sponsor__img {
+    .sponsor-img {
     filter: invert(
       0.5
     );
   }
 
-  .sponsor__img {
-    width: 90px;
+  .sponsor-img {
+    width: 100px;
+    height: 90px;
     opacity: 0.5;
     filter: invert(
       0.7
-    );
-    transition: var(
-      --img-transition
     );
   }
   /* Responsive */
@@ -75,8 +74,8 @@
       row-gap: 3.5rem;
     }
 
-    .sponsor__img {
-      width: 100px;
+    .sponsor-img {
+      width: 90px;
       opacity: 0.5;
       filter: invert(
         0.7
@@ -87,8 +86,8 @@
     }
   }
   @media screen and (min-width: 768px) {
-    .sponsor__img {
-      width: 130px;
+    .sponsor-img {
+      width: 90px;
     }
   }
 </style>
