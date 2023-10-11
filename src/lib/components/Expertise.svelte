@@ -200,8 +200,8 @@
   }
   /* Stijlen voor de Expertise sectie container */
   .expertise {
-    padding: 3rem
-      4rem;
+    padding: 6rem
+      6rem;
     height: 100%;
   }
   /* Stijlen voor de Expertise container */

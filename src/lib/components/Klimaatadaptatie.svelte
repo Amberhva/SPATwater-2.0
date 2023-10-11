@@ -343,8 +343,8 @@
 <style>
   .klimaat-section {
     /* Stijlen voor de hele sectie */
-    padding: 3rem
-      4rem;
+    padding: 6rem
+      6rem;
     color: var(
       --spat
     );
