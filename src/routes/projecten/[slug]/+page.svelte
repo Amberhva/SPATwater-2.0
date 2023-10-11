@@ -68,7 +68,7 @@
     }
 
     :global(video) { 
-      margin-top: 2rem;
+      margin-top: .5rem;
       margin-bottom: 2rem;
       width: 100%;
       border-radius: .5rem;
