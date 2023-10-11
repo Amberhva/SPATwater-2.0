@@ -105,19 +105,18 @@
 </script>
 
 <section>
+  <!-- Mobile filter lijst -->
   <div class="mobile-project-header">
     <h2>Projecten</h2>
-    <ul class="filter-item-list" id="filterList-mobile">
-            
+    <ul class="filter-item-list" id="filterList-mobile">      
       <li class="active">Klimaatadaptatie</li>
       <li>Waterkwaliteit</li>
       <li>B-RAIN</li>
-
     </ul>
     <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
-
   </div>
 
+  <!-- Desktop filter lijst -->
   <div class="project-view-container">
     <article class="projects">
       <div class="set-max-height">
@@ -134,6 +133,7 @@
   
         <div class="project-list-container">
           <ul class="project-list">
+            <!-- Loop voor de desktop versie -->
             {#each data.projectens as project }
                 <a href="/projecten/{project.slug}">
                   <li id="{project.slug}">
@@ -158,8 +158,8 @@
       <div id="map">
         <div class="mobile-porject-list">
           <ul>
+            <!-- Loop voor de mobile versie -->
             {#each data.projectens as project }
-
               <a href="/projecten/{project.slug}">
                 <li id="{project.slug}-mobile">
                   <div class="horizontal-flex">
@@ -171,7 +171,6 @@
                   </div>
                 </li>
               </a>
-
             {/each}
           </ul>
         </div>
