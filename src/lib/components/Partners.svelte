@@ -1,4 +1,6 @@
 <script>
+  export let data
+  console.log(data)
 </script>
 
 <section
@@ -7,6 +9,19 @@
   <div
     class="sponsor__container container grid"
   >
+    {#each data.partner as partner}
+      <a
+        href={partner.link}
+        ><img
+          width="200"
+          height="100"
+          src={partner
+            .image
+            .url}
+          alt=""
+        /></a
+      >
+    {/each}
     <div
       class="sponsor__content"
     />
