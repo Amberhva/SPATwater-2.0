@@ -112,24 +112,27 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin: 0 0.5em 0.5em 0.5em;
+      text-align: left; 
       color: #2f3237;
-      padding-left: 2%;
-      padding-right: 2%;
+      padding: 0 5em; 
     }
 
+    /* Blog main */
     .blog-main {
-        padding-top: 7em;
+      max-width: 50em; 
+      padding-top: 7em;
     }
 
-    .main-img {
+   .main-img {
+      width: 100%;
       max-width: 100%;
+      max-height: 26.5em; 
       height: auto;
       border-radius: 1em;
     }
 
     .tags {
+      font-size: .9em;
       list-style: none;
       padding: 0;
     }
@@ -154,36 +157,44 @@
     }
 
     .title-blog-main {
+      font-size: 2em;
+      color: #7FAEC5;
       margin: 1em 0 0.5em 0;
     }
 
     .paragraphs > p {
+      font-size: .8em;
       margin-bottom: 1em;
     }
 
     /* Related articles */
     .related-articles {
+      max-width: 50em;
       display: inline;
     }
 
     .sub-title {
+      font-size: 1.5em;
+      color: #7FAEC5;
       margin-top: 2em;
-      margin-bottom: 0.5em;
-      color: #89ADC2;
+      margin-bottom: 1.5em;
     }
 
     .article {
       margin-bottom: 2em;
-      
     }
 
     .related-article-img {
+      width: 100%;
       max-width: 100%;
+      max-height: 20em; 
+      /* max-width: 24em; */
       height: auto;
       border-radius: 1em;
     }
 
     .related-articles-tags {
+      font-size: 0.8em;
       list-style: none;
       padding: 0;
     }
@@ -193,25 +204,34 @@
       margin: 0.5em 0.5em 0 0;
     }
 
+    .title-related-articles {
+      font-size: 1em;
+      color: #7FAEC5;
+      margin-top: .5em;
+    }
+
     /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {
-        .blog {
-        padding-left: 10%;
-        padding-right: 10%;
+    @media screen and (min-width: 29.6em) {
+      .blog {
+        padding: 0 20%; 
       }
-    }
 
-    @media screen and (min-width: 600px) {
-        .blog {
-        padding-left: 20%;
-        padding-right: 20%;
-      }    
-    }
+      .related-articles {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
-    @media screen and (min-width: 840px) {
-        .blog {
-        padding-left: 20%;
-        padding-right: 20%;
-      }   
+      .sub-title {
+        flex: 0 0 100%; 
+      }
+
+      .article {
+        flex: 0 0 calc(50% - 1em); 
+        margin-right: 2em; 
+      }
+
+      .article:last-child {
+        margin-right: 0; 
+      }
     }
   </style>
