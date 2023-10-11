@@ -26,7 +26,9 @@
             {@html data.project.content.html}
           </div>
 
-          <h2>Gerelateerde projecten</h2>
+          <a href="/#projecten"><p><i class="fa fa-arrow-left" aria-hidden="true"></i> Terug naar de kaart</p></a>
+
+          <!-- <h2>Gerelateerde projecten</h2> -->
 
         </div>
         
@@ -87,7 +89,7 @@
       text-decoration: none;
     }
 
-    /* :global(blockquote):before { 
+    :global(blockquote):before { 
       content: '"';
       font-size: 5rem;
       position: absolute;
@@ -103,7 +105,7 @@
       color: #4ECD5D;
       margin-left: .5rem;
       margin-top: 1rem;
-    } */
+    }
 
     span {
       color: #2B3F5A;
@@ -116,10 +118,10 @@
       margin-bottom: .5rem;
     }
 
-    h2 {
+    /* h2 {
       color: #7FAEC5;
       margin-bottom: .5rem;
-    }
+    } */
 
     .project-html {
       color: #2B3F5A;
@@ -129,4 +131,17 @@
       margin-bottom: 2rem;
     }
 
-  </style>
+  /* Mobiele weergaven */
+    @media only screen and (max-width: 1100px) {
+      .content-container {
+      width: 90%;
+      margin-left: 5%;
+    }
+
+    .project-banner-img {
+      width: 100%;
+      height: 20rem;
+    }
+  }
+
+</style>
