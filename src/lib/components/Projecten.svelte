@@ -213,6 +213,8 @@
     display: flex;
     gap: 1rem;
     padding: 0rem 2.5rem;
+    /* width: 70%;
+    margin-left: 15%; */
   }
 
   .projects {
