@@ -108,9 +108,9 @@
     overflow: hidden;
   }
 
-  .nav-open {
+  /* .nav-open {
     height: 100vh;
-  }
+  } */
 
   @media only screen and (min-width: 900px) {
     .nav-toggle {

@@ -59,12 +59,7 @@
       <div id="text">
         <h1 class="home-title">Een nieuwe generatie hydrologen</h1>
         <h2><span class="home-content">Concreet op water en bodem</span></h2>
-        <h3 class="home-scroll">
-          <a href="#"
-            >scroll <span class="material-symbols-outlined">
-              arrow_downward
-            </span></a
-          >
+        <h3 class="home-scroll">scroll<span class="material-symbols-outlined">arrow_downward</span>
         </h3>
       </div>
       <img src="assets/grondmobilee.png" id="ground" alt="grond illustratie" />
@@ -78,17 +73,11 @@
       <img src="assets/berg3-full.png" id="layer2-2" alt="berg illustratie" />
       <img src="assets/berg2-full.png" id="layer3-2" alt="berg illustratie" />
       <img src="assets/huisje-full.png" id="layer4-2" alt="huis illustratie" />
-      <img src="assets/berg1-full.png" id="layer5-2" />
+      <img src="assets/berg1-full.png" id="layer5-2" alt="berg illustratie"/>
       <div id="text2">
         <h1 class="home-title2">Een nieuwe generatie hydrologen</h1>
         <span class="home-content2">Concreet op water en bodem</span>
-        <h3 class="home-scroll2">
-          <a href="#"
-            >scroll <span class="material-symbols-outlined">
-              arrow_downward
-            </span></a
-          >
-        </h3>
+        <h3 class="home-scroll2">scroll<span class="material-symbols-outlined">arrow_downward</span></h3>
       </div>
       <img
         src="assets/backgroundfullfinall.png"
@@ -123,7 +112,7 @@
     margin-bottom: 0.5rem;
   }
 
-  .home-scroll a {
+  .home-scroll {
     color: var(--green);
     font-size: 0.8em;
     text-decoration: none;
@@ -166,7 +155,7 @@
       font-size: 1.4em;
     }
 
-    .home-scroll a {
+    .home-scroll {
       font-size: 1.2em;
     }
 
@@ -190,7 +179,7 @@
       font-size: 1.7em;
     }
 
-    .home-scroll a {
+    .home-scroll {
       font-size: 1.4em;
     }
 
@@ -210,7 +199,7 @@
       margin-top: -14.3em;
     }
 
-    .home-scroll a {
+    .home-scroll {
       font-size: 1.4em;
     }
 
@@ -301,7 +290,7 @@
       margin-top: -15em;
     }
 
-    .home-scroll2 a {
+    .home-scroll2 {
       color: var(--green);
       font-size: 1em;
     }
