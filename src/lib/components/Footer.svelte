@@ -22,25 +22,26 @@
   <article>
     <h2>Over</h2>
     <ul>
-      <li>Over ons</li>
-      <li>Klimaatadaptatie</li>
-      <li>Waterkwaliteit</li>
-      <li>Projecten</li>
-      <li>Kennisbank</li>
+      <li><a href="#over">Over ons</a></li>
+      <li><a href="#klimaatadaptatie">Klimaatadaptatie</a></li>
+      <li><a href="#waterkwaliteit">Waterkwaliteit</a></li>
+      <li><a href="#brain">b-RAIN</a></li>
+      <li><a href="#projecten">Projecten</a></li>
+      <li><a href="#kennisbank">Kennisbank</a></li>
     </ul>
   </article>
 
   <article>
     <h2>Bedrijf</h2>
     <ul>
-      <li>Team</li>
+      <li><a href="#team">Team</a></li>
     </ul>
   </article>
 
   <article>
     <h2>Contact</h2>
     <ul>
-      <li>Neem contact op</li>
+      <li><a href="#contact">Neem contact op</a></li>
     </ul>
   </article>
 </section>
@@ -63,10 +64,15 @@
 
   ul {
     list-style-type: none;
+    text-decoration: none;
+    cursor: pointer;
   }
 
-  li {
+  li,
+  a {
+    text-decoration: none;
     color: white;
+    cursor: pointer;
   }
 
   section {
@@ -79,5 +85,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: 720px) {
+    h2 {
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+    }
+    section {
+      height: 50vh;
+    }
+    .container {
+      flex-direction: row;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
   }
 </style>
