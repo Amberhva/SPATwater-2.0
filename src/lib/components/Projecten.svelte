@@ -114,7 +114,6 @@
       <li>B-RAIN</li>
 
     </ul>
-
     <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
 
   </div>
