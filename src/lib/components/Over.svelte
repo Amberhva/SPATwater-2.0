@@ -73,7 +73,8 @@
     img {
       height: 10rem;
       width: 100%;
-      object-fit: cover;
+      z-index: -1;
+      object-fit: contain;
     }
 
     .inner-section {
