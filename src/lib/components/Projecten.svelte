@@ -380,7 +380,6 @@
     .mobile-porject-list {
       height: 16vh;
       width: 100%;
-      padding: .5rem;
       display: block;
     }
 
