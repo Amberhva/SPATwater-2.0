@@ -39,11 +39,8 @@
     <div class="mobile-blog-header">
       <ul class="filter-item-list" id="filterList-mobile">
         <li class="active">Alles</li>
-
         <li>Klimaatadaptatie</li>
-
         <li>Waterkwaliteit</li>
-
         <li>B-RAIN</li>
       </ul>
 
@@ -60,11 +57,8 @@
       <div class="filter-list-container">
         <ul class="filter-item-list" id="filterList">
           <li class="active">Alles</li>
-
           <li>Klimaatadaptatie</li>
-
           <li>Waterkwaliteit</li>
-
           <li>B-RAIN</li>
         </ul>
       </div>
@@ -89,21 +83,14 @@
 
           <div class="content-field">
             <span class="category">{lastPost1.categorie}</span>
-
-            <span class="author"
-              >Door {lastPost1.author} op {lastPost1.date}</span
-            >
-
+            <span class="author">Door {lastPost1.author} op {lastPost1.date}</span>
             <h3>{lastPost1.title}</h3>
-
             <div class="hygraph-html">
               {@html lastPost1.content.html}
             </div>
 
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{lastPost1.slug}"
-                >Verder lezen</a
-              >
+              <a class="read-more-link" href="/post/{lastPost1.slug}">Verder lezen</a>
             </div>
           </div>
         {/if}
@@ -117,10 +104,7 @@
 
           <div class="content-field2">
             <span class="category2">{lastPost2.categorie}</span>
-
-            <span class="author2"
-              >Door {lastPost2.author} op {lastPost2.date}</span
-            >
+            <span class="author2">Door {lastPost2.author} op {lastPost2.date}</span>
           </div>
 
           <h3>{lastPost2.title}</h3>
@@ -130,9 +114,7 @@
           </div>
 
           <div class="read-more-container2">
-            <a class="read-more-link2" href="/post/{lastPost2.slug}"
-              >Verder lezen</a
-            >
+            <a class="read-more-link2" href="/post/{lastPost2.slug}">Verder lezen</a>
           </div>
         {/if}
       </article>
@@ -154,7 +136,7 @@
           <h3>{lastPost3.title}</h3>
 
           <div class="hygraph-html3">
-            {@html lastPost3.content.html}
+{@html lastPost3.content.html}
           </div>
 
           <div class="read-more-container3">
@@ -188,10 +170,7 @@
                       <h3>{post.title}</h3>
 
                       <p class="intro-text">
-                        Het is tijd om Nederlanders bewust te maken van de
-                        hoeveelheid regenwater op- en rondom het huis. Onze
-                        oplossing is het grootschalig inzetten van
-                        micro-maatregelen.
+                        Het is tijd om Nederlanders bewust te maken van de hoeveelheid regenwater op- en rondom het huis. Onze oplossing is het grootschalig inzetten vanmicro-maatregelen.
                       </p>
 
                       <a class="read-more-small" href="/post/{post.slug}">

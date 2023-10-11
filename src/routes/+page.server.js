@@ -35,6 +35,12 @@ export async function load() {
       }
       slug
     }
+    partner {
+      image {
+        url
+      }
+      link
+    }
   }
   ` 
   
