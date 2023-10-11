@@ -1,44 +1,45 @@
 <script>
-    export let data;
-  
-    import Navbar from "$lib/components/Navbar.svelte";
-    import Footer from "$lib/components/Footer.svelte";
+  export let data;
 
+  import Navbar from "$lib/components/Navbar.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 </script>
 
-  <svelte:head>
-    <title>SPATwater - {data.project.title}</title>
-  </svelte:head>
+<svelte:head>
+  <title>SPATwater - {data.post.title}</title>
+</svelte:head>
   
-  <Navbar />
+<Navbar />
 
-  <main>
-    {#if data.project}
-      {#if data.project.image && data.project.image.url}
+<main class="blog">
+  <!-- Start blog main -->
+  {#if data.post}
+    {#if data.post.image && data.post.image.url}
 
-        <div class="content-container">
-          <img class="project-banner-img" src={data.project.image.url} alt={data.project.title} />
+      <div class="content-container">
+        <img class="project-banner-img" src={data.post.image.url} alt={data.post.title} />
 
-          <span>{data.project.categorie}</span>
-          <h1>{data.project.title}</h1>
+        <span>{data.post.categorie}</span>
+        <h1>{data.post.title}</h1>
 
-          <div class="project-html">
-            {@html data.project.content.html}
-          </div>
-
-          <a href="/#projecten"><p><i class="fa fa-arrow-left" aria-hidden="true"></i> Terug naar de kaart</p></a>
-
-          <!-- <h2>Gerelateerde projecten</h2> -->
-
+        <div class="project-html">
+          {@html data.post.content.html}
         </div>
-        
-      {/if}
-    {:else}
 
-      <p>Project not found.</p>
+        <a href="/#projecten"><p><i class="fa fa-arrow-left" aria-hidden="true"></i> Terug naar de kennisbank</p></a>
+
+        <h2>Gerelateerde artikelen</h2>
+        <p>Hier komen twee artikelen met de zelfde categorie te staan</p>
+
+      </div>
+      
     {/if}
+  {:else}
+    <p>Project not found.</p>
+  {/if}
+
   </main>
-  
+
   <Footer />
 
   <style>
@@ -68,7 +69,7 @@
     }
 
     :global(video) { 
-      margin-top: .5rem;
+      margin-top: 2rem;
       margin-bottom: 2rem;
       width: 100%;
       border-radius: .5rem;
@@ -118,10 +119,10 @@
       margin-bottom: .5rem;
     }
 
-    /* h2 {
+    h2 {
       color: #7FAEC5;
       margin-bottom: .5rem;
-    } */
+    }
 
     .project-html {
       color: #2B3F5A;
@@ -143,5 +144,4 @@
       height: 20rem;
     }
   }
-
-</style>
+  </style>

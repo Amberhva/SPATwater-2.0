@@ -7,21 +7,23 @@ export async function load({ params }) {
 
     // Define your GraphQL query with a filter for the specific slug
     const query = gql`
-        query GetProjectBySlug($slug: String!) {
-            projectens(where: { slug: $slug }) {
-                id
+        query GetPostBySlug($slug: String!) {
+            kennisbanks(where: { slug: $slug }) {
+                author
                 categorie
-                intro
-                plaats {
-                    latitude
-                    longitude
-                }
+                createdAt
+                date
                 image {
                     url
                 }
-                publishedAt
-                slug
                 title
+                content {
+                    raw
+                    html
+                    markdown
+                    text
+                }
+                slug
             }
         }
     `;
@@ -34,15 +36,15 @@ export async function load({ params }) {
         const data = await hygraph.request(query, variables);
 
         // Return the first project found with the matching slug
-        if (data.projectens.length > 0) {
+        if (data.kennisbanks.length > 0) {
             return {
-                project: data.projectens[0], // Assuming you want to return a single project
+                post: data.kennisbanks[0], // Assuming you want to return a single project
             };
         } else {
             // Handle the case where no project with the specified slug is found
             return {
                 status: 404, // Not Found
-                error: "Blog not found",
+                error: "Post not found",
             };
         }
     } catch (error) {

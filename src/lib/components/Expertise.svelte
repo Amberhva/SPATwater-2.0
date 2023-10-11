@@ -1,184 +1,85 @@
 <script>
 </script>
 
-<!-- Sectie voor Expertise -->
 <section
   class="expertise section"
 >
-  <!-- Header voor de Expertise sectie -->
   <h2
-    class="expertise-header"
+    class="expertise-title"
   >
     Expertise
   </h2>
 
-  <!-- Eerste Expertise-container -->
   <div
-    class="expertise-container"
+    class="expertise__wrapper"
   >
-    <!-- Afbeelding voor Klimaatadaptatie -->
     <div
-      class="right"
+      class="expertise__card"
     >
       <img
-        class="expertise-img"
+        class="expertise3"
         src="assets/Untitled4.png"
-        style="width: 400px; height: 250px;"
-        alt="Illustratie Klimaat"
+        alt="Illustratie klimaatadaptatie"
       />
-    </div>
-    <!-- Expertise-info voor Klimaatadaptatie -->
-    <div
-      class="expertise-info"
-    >
-      <!-- Titel voor Klimaatadaptatie -->
-      <p
-        class="expertise-title"
-      >
+      <h3>
         Klimaatadaptatie
-      </p>
-      <!-- Omschrijving voor Klimaatadaptatie -->
-      <p
-        class="omschrijving"
-      >
-        SPATwater
-        helpt
-        overheden en
-        bedrijven om
-        private
-        grond
-        klimaatadaptief
-        in te
-        richten door
-        middel van
-        ruimtelijke
-        data en
-        sociale
-        kennis.
-      </p>
-      <!-- Link naar meer informatie -->
+      </h3>
       <a
         href="#klimaat"
         class="button"
       >
-        <!-- Tekst voor de link -->
         <p
           class="button_text2"
         >
-          Lees Meer
+          Meer
+          informatie
         </p>
       </a>
     </div>
-  </div>
 
-  <!-- Tweede Expertise-container -->
-  <div
-    class="expertise-container"
-  >
-    <!-- Expertise-info voor Waterkwaliteit -->
     <div
-      class="expertise-info left"
+      class="expertise__card"
     >
-      <!-- Titel voor Waterkwaliteit -->
-      <p
-        class="expertise-title"
-      >
+      <img
+        class="expertise2"
+        src="assets/Untitled3.png"
+        alt="Illustratie waterkwaliteit"
+      />
+      <h3>
         Waterkwaliteit
-      </p>
-      <!-- Omschrijving voor Waterkwaliteit -->
-      <p
-        class="omschrijving"
-      >
-        SPATwater
-        biedt hulp
-        aan
-        organisaties
-        bij het
-        identificeren
-        van de
-        implicaties
-        van de KRW
-        voor hun
-        specifieke
-        situatie.
-      </p>
-      <!-- Link naar meer informatie -->
+      </h3>
       <a
         href="#waterkwaliteit"
         class="button"
       >
-        <!-- Tekst voor de link -->
         <p
           class="button_text2"
         >
-          Lees Meer
+          Meer
+          informatie
         </p>
       </a>
     </div>
-    <!-- Afbeelding voor Waterkwaliteit -->
-    <div>
-      <img
-        class="expertise-img"
-        src="assets/Untitled3.png"
-        style="width:500px; height: 250px;"
-        alt="Illustratie Waterkwaliteit"
-      />
-    </div>
-  </div>
-
-  <!-- Derde Expertise-container -->
-  <div
-    class="expertise-container"
-  >
-    <!-- Afbeelding voor B-RAIN -->
     <div
-      class="right2"
+      class="expertise__card"
     >
       <img
-        class="expertise-img"
+        class="expertise2"
         src="assets/brainlogo.png"
-        style="width: 400px; height:250px;"
-        alt="Illustratie B-RAIN"
+        alt="Illustratie B-Rain"
       />
-    </div>
-    <!-- Expertise-info voor B-RAIN -->
-    <div
-      class="expertise-info right"
-    >
-      <!-- Titel voor B-RAIN -->
-      <p
-        class="expertise-title"
-      >
-        B-RAIN
-      </p>
-      <!-- Omschrijving voor B-RAIN -->
-      <p
-        class="omschrijving"
-      >
-        B-rain wil
-        bewoners
-        positief
-        betrokken
-        houden bij
-        het bufferen
-        van
-        regenwater
-        en het groen
-        houden van
-        hun tuin.
-      </p>
-      <br />
-      <br />
-      <!-- Link naar meer informatie -->
+      <h3>
+        B-Rain
+      </h3>
       <a
-        href="#b-Rain"
+        href="#brain"
         class="button"
       >
-        <!-- Tekst voor de link -->
         <p
           class="button_text2"
         >
-          Lees Meer
+          Meer
+          informatie
         </p>
       </a>
     </div>
@@ -186,125 +87,118 @@
 </section>
 
 <style>
-  /* Stijlen voor de Expertise sectie */
-  .expertise-section {
-    padding: 3rem
-      4rem;
-    color: var(
-      --spat
-    );
-  }
-  /* Globale stijlen voor afbeeldingen */
-  img {
-    max-width: 400px;
-  }
-  /* Stijlen voor de Expertise sectie container */
   .expertise {
-    padding: 6rem
-      6rem;
-    height: 100%;
-  }
-  /* Stijlen voor de Expertise container */
-  .expertise-container {
+    background-color: white;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    align-items: left;
+    flex-direction: column;
+    position: relative;
   }
-  /* Stijlen voor afbeeldingen binnen de Expertise container */
-  .expertise-img {
-    max-width: 400px;
-    max-width: 100%;
-    height: auto;
-  }
-  /* Stijlen voor rechterzijde binnen de Expertise container */
-  .right {
-    margin-left: 1rem;
-  }
-  /* Stijlen voor rechterzijde binnen de Expertise container */
-  .right2 {
-    margin-right: 1rem;
-  }
-  /* Stijlen voor informatie binnen de Expertise container */
-  .expertise-info {
-    display: grid;
-    place-content: center;
-  }
-  /* Stijlen voor linkerzijde binnen de Expertise container */
-  .left {
-    margin-left: 3rem;
-  }
-  /* Stijlen voor de Expertise header */
-  .expertise-header {
-    color: var(
-      --spat
-    );
-    font-size: 1.5rem;
-  }
-  /* Stijlen voor de Expertise titel */
   .expertise-title {
-    margin-top: 10px;
-    margin-bottom: 13px;
+    font-size: 1.5rem;
     color: var(
       --spat
     );
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 600;
+    text-align: center;
   }
-  /* Stijlen voor de Expertise omschrijving */
-  .omschrijving {
-    max-width: 450px;
-    font-size: 0.8rem;
+  .expertise h3 {
+    font-size: 1.3rem;
     color: var(
       --darkblue
     );
-    margin-bottom: 0.5rem;
-    text-align: start;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1em;
   }
-  /* Stijlen voor de knop */
+  .expertise__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 2em;
+    padding-bottom: 4em;
+  }
+  .expertise__card {
+    margin: 0 auto;
+    height: 25em;
+    width: 18em;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0
+      4px 6px
+      rgba(
+        174,
+        190,
+        205,
+        0.3
+      );
+    background-color: var(
+      --lg-bg
+    );
+    color: var(
+      --darkblue
+    );
+    transition: 0.3s
+      ease-in;
+  }
+  .expertise__card
+    img {
+    width: 250px;
+    padding-bottom: 2em;
+  }
+  .expertise__card
+    .expertise2 {
+    width: 250px;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+  }
+  .expertise__card:nth-child(
+      2
+    ) {
+    background-color: var(
+      --lg-bg
+    );
+  }
+  .expertise__card:nth-child(
+      3
+    ) {
+    background-color: var(
+      --lg-bg
+    );
+  }
+  .expertise__card
+    button:hover {
+    cursor: pointer;
+  }
+  .expertise__card:hover {
+    transform: scale(
+      1.075
+    );
+    transition: 0.3s
+      ease-in;
+    cursor: pointer;
+  }
   .button {
     display: inline-block;
     background-color: var(
       --green
     );
     color: white;
+    padding: 0.7rem
+      1rem;
+    height: 50px;
     border-radius: 5px;
     font-weight: var(
       --font-semi-bold
     );
-    width: fit-content;
-    height: 45px;
     transition: 0.3s;
-  }
-  /* Stijlen voor de knoptekst */
-  .button_text2 {
-    color: white;
     text-decoration: none;
-    font-size: 0.9rem;
   }
-  /* Responsieve stijlen voor schermen kleiner dan 768px */
-  @media only screen and (max-width: 768px) {
-    /* Aanpassingen voor Expertise-container */
-    .expertise-container {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-    /* Aanpassingen voor Expertise-info */
-    .expertise-info {
-      margin-bottom: 1rem;
-      order: 2;
-    }
-    /* Aanpassingen voor Expertise-afbeeldingen */
-    .expertise-img {
-      order: 1;
-      max-width: 100%;
-      height: auto;
-    }
-    /* Aanpassingen voor rechter- en linkerzijde binnen de Expertise container */
-    .right,
-    .left {
-      margin-left: 0;
-    }
+  .button_text2 {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
   }
 </style>
