@@ -44,13 +44,7 @@
         <li>B-RAIN</li>
       </ul>
 
-      <input
-        class="searchbar"
-        type="search"
-        id="search"
-        name="search"
-        placeholder="Zoek een project"
-      />
+      <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
     </div>
 
     <div class="filter-row">
@@ -136,13 +130,11 @@
           <h3>{lastPost3.title}</h3>
 
           <div class="hygraph-html3">
-{@html lastPost3.content.html}
+          {@html lastPost3.content.html}
           </div>
 
           <div class="read-more-container3">
-            <a class="read-more-link3" href="/post/{lastPost3.slug}"
-              >Verder lezen</a
-            >
+            <a class="read-more-link3" href="/post/{lastPost3.slug}">Verder lezen</a>
           </div>
         {/if}
       </article>
@@ -151,6 +143,7 @@
     <div class="bloglist">
       <article class="blog">
         <div class="set-max-height">
+
           <div class="blog-list-container">
             <ul class="blog-list">
               {#each data.kennisbanks as post}
@@ -162,9 +155,7 @@
                       <div class="blog-info-row">
                         <span class="category">{post.categorie}</span>
 
-                        <span class="author"
-                          >Door {post.author} op {post.date}</span
-                        >
+                        <span class="author">Door {post.author} op {post.date}</span>
                       </div>
 
                       <h3>{post.title}</h3>
@@ -174,8 +165,7 @@
                       </p>
 
                       <a class="read-more-small" href="/post/{post.slug}">
-                        <i class="fa fa-arrow-right" aria-hidden="true" /></a
-                      >
+                        <i class="fa fa-arrow-right" aria-hidden="true"/></a>
                     </div>
                   </li>
                 </a>
@@ -225,10 +215,6 @@
     grid-template-areas:
       "latest latest bloglist"
       "blog2 blog3 bloglist";
-  }
-
-  .blog-view-container img {
-    margin: 0;
   }
 
   .latest {
@@ -400,9 +386,6 @@
     gap: 3rem;
   }
 
-  .category {
-    text-align: left;
-  }
 
   .author {
     position: absolute;
@@ -433,7 +416,6 @@
 
   .blog-list span {
     color: #2b3f5a;
-    font-weight: 600;
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
   }
@@ -467,7 +449,6 @@
 
   .main-post span {
     color: #2b3f5a;
-    font-weight: 600;
     font-size: 0.9rem;
   }
 
