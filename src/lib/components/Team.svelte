@@ -59,7 +59,6 @@
 
   <div class="team2-wrapper">
     <div class="team2-mees">
-      <img src="assets/mees1.png" alt="foto Mees" class="team-img" />
       <div class="personal-information">
         <h3 class="name">Mees</h3>
         <h4 class="mail">m.vmilligen@spatwater.nl</h4>
