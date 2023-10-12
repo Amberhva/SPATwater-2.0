@@ -39,6 +39,7 @@
     flex-direction: column;
     position: relative;
   }
+
   .expertise-title {
     font-size: 1.5rem;
     color: var(--spat);
@@ -46,6 +47,7 @@
     text-align: left;
     margin-left: 4rem;
   }
+
   .expertise h3 {
     font-size: 1.3rem;
     color: var(
@@ -55,6 +57,7 @@
     text-align: center;
     padding-bottom: 1em;
   }
+
   .expertise__wrapper {
     display: flex;
     flex-direction: column;
@@ -73,6 +76,7 @@
     grid-template-rows: 1fr;
     padding: 4rem; */
   }
+
   .expertise__card {
     margin: 0 auto;
     height: 25em;
@@ -99,6 +103,7 @@
     transition: 0.3s
       ease-in;
   }
+
   .expertise__card
     img {
     width: 250px;
@@ -133,6 +138,7 @@
       ease-in;
     cursor: pointer;
   }
+
   .button {
     display: inline-block;
     background-color: var(
@@ -149,6 +155,7 @@
     transition: 0.3s;
     text-decoration: none;
   }
+
   .button_text2 {
     text-decoration: none;
     color: white;
