@@ -71,15 +71,19 @@
 
   <div class="blog-view-container">
     <div class="latest">
+
+      
       <article class="main-post">
+       
         {#if data.kennisbanks.length > 0}
-          <img src={lastPost1.image.url} alt="" />
+          
+        <img src={lastPost1.image.url} alt="" />
 
           <div class="content-field">
             <span class="category">{lastPost1.categorie}</span>
             <span class="author">Door {lastPost1.author} op {lastPost1.date}</span>
             <h3>{lastPost1.title}</h3>
-            <div class="hygraph-html">
+           <div class="hygraph-html">
               {@html lastPost1.content.html}
             </div>
 
@@ -89,7 +93,13 @@
           </div>
         {/if}
       </article>
+    
+    
+    
+    
     </div>
+
+
 
     <div class="blog2">
       <article class="main-post2">

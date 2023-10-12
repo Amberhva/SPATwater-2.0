@@ -2,6 +2,7 @@
 </script>
 
 <!-- Klimaat section -->
+
 <div
   class="light-background"
 >
@@ -349,6 +350,7 @@
     color: var(
       --spat
     );
+    margin-bottom: 1rem;
   }
 
   .bold-text {
