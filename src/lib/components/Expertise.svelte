@@ -17,7 +17,7 @@
       class="expertise__card"
     >
       <img
-        class="expertise3"
+        class="expertise2"
         src="assets/Untitled4.png"
         alt="Illustratie klimaatadaptatie"
       />
@@ -60,6 +60,7 @@
         </p>
       </a>
     </div>
+
     <div
       class="expertise__card"
     >
@@ -93,6 +94,7 @@
     flex-direction: column;
     position: relative;
   }
+
   .expertise-title {
     font-size: 1.5rem;
     color: var(
@@ -100,7 +102,9 @@
     );
     font-weight: 600;
     text-align: center;
+    margin-top: 2rem;
   }
+
   .expertise h3 {
     font-size: 1.3rem;
     color: var(
@@ -110,12 +114,17 @@
     text-align: center;
     padding-bottom: 1em;
   }
+
   .expertise__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 4rem;
+    grid-template-columns: repeat(
+      1,
+      minmax(0, 1fr)
+    );
+    gap: 1rem;
+    padding: 4em;
   }
+
   .expertise__card {
     margin: 0 auto;
     height: 25em;
@@ -142,43 +151,13 @@
     transition: 0.3s
       ease-in;
   }
+
   .expertise__card
     img {
-    width: 250px;
-    padding-bottom: 2em;
+    width: 100%;
+    padding-bottom: 1em;
   }
-  .expertise__card
-    .expertise2 {
-    width: 250px;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
-  }
-  .expertise__card:nth-child(
-      2
-    ) {
-    background-color: var(
-      --lg-bg
-    );
-  }
-  .expertise__card:nth-child(
-      3
-    ) {
-    background-color: var(
-      --lg-bg
-    );
-  }
-  .expertise__card
-    button:hover {
-    cursor: pointer;
-  }
-  .expertise__card:hover {
-    transform: scale(
-      1.075
-    );
-    transition: 0.3s
-      ease-in;
-    cursor: pointer;
-  }
+
   .button {
     display: inline-block;
     background-color: var(
@@ -195,9 +174,22 @@
     transition: 0.3s;
     text-decoration: none;
   }
+
   .button_text2 {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+  }
+
+  @media (min-width: 900px) {
+    .expertise__wrapper {
+      grid-template-columns: repeat(
+        3,
+        minmax(
+          0,
+          1fr
+        )
+      );
+    }
   }
 </style>
