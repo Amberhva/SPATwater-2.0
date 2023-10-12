@@ -45,7 +45,7 @@
     color: var(--spat);
     font-weight: 600;
     text-align: left;
-    margin-left: 4rem;
+    margin-left: 14rem;
   }
 
   .expertise h3 {
