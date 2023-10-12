@@ -2,85 +2,31 @@
 </script>
 
 <section
-  class="expertise section"
->
-  <h2
-    class="expertise-title"
-  >
-    Expertise
-  </h2>
+  class="expertise section">
+  <h2 class="expertise-title">Expertise</h2>
 
-  <div
-    class="expertise__wrapper"
-  >
-    <div
-      class="expertise__card"
-    >
-      <img
-        class="expertise3"
-        src="assets/Untitled4.png"
-        alt="Illustratie klimaatadaptatie"
-      />
-      <h3>
-        Klimaatadaptatie
-      </h3>
-      <a
-        href="#klimaat"
-        class="button"
-      >
-        <p
-          class="button_text2"
-        >
-          Meer
-          informatie
-        </p>
+  <div class="expertise__wrapper">
+    <div class="expertise__card">
+      <img class="expertise3" src="assets/Untitled4.png" alt="Illustratie klimaatadaptatie"/>
+      <h3>Klimaatadaptatie</h3>
+      <a href="#klimaat" class="button">
+        <p class="button_text2">Meer informatie</p>
       </a>
     </div>
 
-    <div
-      class="expertise__card"
-    >
-      <img
-        class="expertise2"
-        src="assets/Untitled3.png"
-        alt="Illustratie waterkwaliteit"
-      />
-      <h3>
-        Waterkwaliteit
-      </h3>
-      <a
-        href="#waterkwaliteit"
-        class="button"
-      >
-        <p
-          class="button_text2"
-        >
-          Meer
-          informatie
-        </p>
+    <div class="expertise__card">
+      <img class="expertise2" src="assets/Untitled3.png" alt="Illustratie waterkwaliteit"/>
+      <h3>Waterkwaliteit</h3>
+      <a href="#waterkwaliteit" class="button">
+        <p class="button_text2">Meer informatie</p>
       </a>
     </div>
-    <div
-      class="expertise__card"
-    >
-      <img
-        class="expertise2"
-        src="assets/brainlogo.png"
-        alt="Illustratie B-Rain"
-      />
-      <h3>
-        B-Rain
-      </h3>
-      <a
-        href="#brain"
-        class="button"
-      >
-        <p
-          class="button_text2"
-        >
-          Meer
-          informatie
-        </p>
+    
+    <div class="expertise__card">
+      <img class="expertise2" src="assets/brainlogo.png" alt="Illustratie B-Rain"/>
+      <h3> B-Rain</h3>
+      <a href="#brain" class="button">
+        <p class="button_text2">Meer informatie</p>
       </a>
     </div>
   </div>
@@ -95,11 +41,10 @@
   }
   .expertise-title {
     font-size: 1.5rem;
-    color: var(
-      --spat
-    );
+    color: var(--spat);
     font-weight: 600;
-    text-align: center;
+    text-align: left;
+    margin-left: 4rem;
   }
   .expertise h3 {
     font-size: 1.3rem;
@@ -111,10 +56,22 @@
     padding-bottom: 1em;
   }
   .expertise__wrapper {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4rem 2rem; 
+    gap: 3rem;
+
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 6rem; 
+    gap: 1rem; */
+
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 4rem;
+    padding: 4rem; */
   }
   .expertise__card {
     margin: 0 auto;
@@ -167,10 +124,7 @@
       --lg-bg
     );
   }
-  .expertise__card
-    button:hover {
-    cursor: pointer;
-  }
+
   .expertise__card:hover {
     transform: scale(
       1.075
@@ -200,4 +154,14 @@
     color: white;
     font-size: 1rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    .expertise__wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 4rem 8rem; 
+    gap: 3rem;
+  }
+  }
+
 </style>
