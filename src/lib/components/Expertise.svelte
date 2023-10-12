@@ -45,7 +45,7 @@
     color: var(--spat);
     font-weight: 600;
     text-align: left;
-    margin-left: 14rem;
+    margin-left: 2.5rem;
   }
 
   .expertise h3 {
@@ -168,6 +168,10 @@
     justify-content: space-around;
     padding: 4rem 8rem; 
     gap: 3rem;
+  }
+
+  .expertise-title{
+    margin-left: 14rem;
   }
   }
 
