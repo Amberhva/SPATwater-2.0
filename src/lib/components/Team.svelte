@@ -14,10 +14,14 @@
       },
     });
   });
+
+export let data
+console.log (data)
 </script>
 
 <section class="team section">
   <h2 class="team-title">Team</h2>
+
 
   <div class="team-container swiper-container">
     <div class="swiper-wrapper">
@@ -30,6 +34,7 @@
           <h3 class="team-mail">m.vmilligen@spatwater.nl</h3>
         </div>
       </div>
+
 
       <!--==================== JESSE ====================-->
       <div class="team-card swiper-slide">
