@@ -57,6 +57,10 @@
     width: 60%;
   }
 
+  .image-container {
+    width: 40%;
+  }
+
   img {
     height: 20rem;
     object-fit: cover;
