@@ -450,6 +450,11 @@
     width: 20rem;
     object-fit: cover;
     border-radius: 0.5rem 0rem 0rem 0.5rem;
+    margin: 0;
+  }
+
+  .main-post2 img, .main-post3 img {
+    margin: 0;
   }
 
   .main-post .content-field {
