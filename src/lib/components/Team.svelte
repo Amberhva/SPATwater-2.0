@@ -179,7 +179,7 @@ console.log (data)
     }
 
     .team2-mees {
-      background-image: url("assets/Mees1_fullscreen.png");
+      background-image: url("./assets/Mees1_fullscreen.png");
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -188,7 +188,7 @@ console.log (data)
     }
 
     .team2-timo {
-      background-image: url("assets/Timo1_fullscreen.png");
+      background-image: url("./assets/Timo1_fullscreen.png");
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -197,7 +197,7 @@ console.log (data)
     }
 
     .team2-jesse {
-      background-image: url("assets/Jesse1_fullscreen.png");
+      background-image: url("./assets/Jesse1_fullscreen.png");
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
