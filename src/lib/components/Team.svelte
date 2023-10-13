@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import img from "$lib/assets/Mees1_fullscreen.png"
 
   onMount(() => {
     let swiper = new Swiper(".team-container", {
@@ -179,7 +180,7 @@ console.log (data)
     }
 
     .team2-mees {
-      background-image: url("./assets/Mees1_fullscreen.png");
+      background-image: url({img});
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
