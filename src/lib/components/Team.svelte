@@ -197,7 +197,7 @@ console.log (data)
     }
 
     .team2-jesse {
-      background-image: url("assets/Jesse1_fullscreen.png");
+      background-image: url("/assets/Jesse1_fullscreen.png");
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -222,7 +222,7 @@ console.log (data)
     }
 
     .team2-mees:hover {
-      background-image: url("assets/Mees2_fullscreen.png");
+      background-image: url("/assets/Mees2_fullscreen.png");
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -232,7 +232,7 @@ console.log (data)
     }
 
     .team2-timo:hover {
-      background-image: url("assets/Timo2_fullscreen.png");
+      background-image: url("/assets/Timo2_fullscreen.png");
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -242,7 +242,7 @@ console.log (data)
     }
 
     .team2-jesse:hover {
-      background-image: url("assets/Jesse2_fullscreen.png");
+      background-image: url("/assets/Jesse2_fullscreen.png");
       background-size: 100%;
       background-repeat: no-repeat;
       border-radius: 10px;
